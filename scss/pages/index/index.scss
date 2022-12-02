@@ -6,7 +6,7 @@
 @import "../../media/media.scss";
 
 .welcome:before {
-  @include welcome-setting("../../../pages/index/pic/welcome.jpg", 0.35);
+  @include welcome-setting("../../../pages/index/pic/welcome.jpg", 0.9);
 }
 
 // 所有的單元介紹

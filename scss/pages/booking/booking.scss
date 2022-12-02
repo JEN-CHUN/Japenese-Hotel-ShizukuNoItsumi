@@ -4,18 +4,47 @@
 @import "../../utili/utili.scss";
 @import "../../media/media.scss";
 
-// Welcome Picture
-
-.welcome:before {
-  @include welcome-setting("../../../pages/spring/pic/welcome.jpg", 1);
-  background-position: 50% 80%;
+header {
+  background-color: $white;
+  box-shadow: 10px 0px 100px 1px $secondary-lighter-blue;
+  .nav-item {
+    a {
+      color: $main-color;
+    }
+  }
 }
 
-.welcome {
-  &__title {
-    color: $white;
-    @include welcome-title-position(40%, 80%);
+.hamburger {
+  .bar {
+    background-color: $main-color;
   }
+}
+
+// .login-wrapper {
+//   position: relative;
+
+//   width: 100vw;
+//   min-height: calc(100vh - 60px);
+//   // border-bottom: 1px solid $white;
+//   background-color: $secondary-white-blue;
+// }
+
+main {
+  background-color: $secondary-white-blue;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-menu {
+  width: 500px;
+  height: 600px;
+
+  background-color: $white;
+
+  box-shadow: 1px 1px 8px 1px $secondary-lighter-blue;
+  border-radius: 10px;
 }
 
 @media (min-width: 840px) {

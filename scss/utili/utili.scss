@@ -28,12 +28,15 @@
 
 .page-button {
     display: inline-block;
+    width: 200px;
+    height: 50px;
     text-align: center;
     color: $white;
-    padding: 0.8rem 1.2rem;
+    line-height: 50px;
     font-size: 1.2rem;
-    border-radius: 10px;
-    background-color: $secondary-dark-blue;
+    border-radius: 50px;
+    background: linear-gradient($secondary-lighter-blue 10%, $secondary-dark-blue 100%);
+    box-shadow: 0 2px 2px $secondary-lighter-blue;
     border: 0;
 }
 

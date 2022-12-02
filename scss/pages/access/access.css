@@ -34,12 +34,11 @@ header {
   z-index: 100;
 }
 header .header-logo {
-  padding-left: 44px;
-  padding-right: 44px;
+  margin: 8px 0 10px 20px;
 }
 header .header-logo img {
-  height: 100%;
-  width: 100%;
+  width: 70%;
+  vertical-align: bottom;
 }
 header .pc-nav {
   display: flex;
@@ -239,29 +238,6 @@ footer .copyright {
   margin: 0 auto;
 }
 
-.welcome:before {
-  content: "";
-  background: url(../../index/pic/welcome.jpg) no-repeat center center/cover;
-  opacity: 0.3;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
-}
-
-.page-button {
-  display: inline-block;
-  text-align: center;
-  color: #fff;
-  padding: 0.8rem 1.2rem;
-  font-size: 1.2rem;
-  border-radius: 50px;
-  background-color: #00a3af;
-  border: 0;
-}
-
 .scroll-section {
   width: 85%;
   display: flex;
@@ -303,6 +279,10 @@ footer .copyright {
   justify-content: space-between;
 }
 
+.flex-around {
+  justify-content: space-around;
+}
+
 .h-100 {
   height: 100%;
 }
@@ -315,6 +295,10 @@ footer .copyright {
   width: 50%;
 }
 
+.w-49-5 {
+  width: 49.5%;
+}
+
 .w-49 {
   width: 49%;
 }
@@ -325,6 +309,30 @@ footer .copyright {
 
 .w-40 {
   width: 40%;
+}
+
+.order-0 {
+  order: 0;
+}
+
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+.order-3 {
+  order: 3;
+}
+
+.order-4 {
+  order: 4;
+}
+
+.order-5 {
+  order: 5;
 }
 
 @media (max-width: 576px) {
@@ -354,12 +362,15 @@ footer .copyright {
 
 .page-button {
   display: inline-block;
+  width: 200px;
+  height: 50px;
   text-align: center;
   color: #fff;
-  padding: 0.8rem 1.2rem;
+  line-height: 50px;
   font-size: 1.2rem;
-  border-radius: 10px;
-  background-color: #00a3af;
+  border-radius: 50px;
+  background: linear-gradient(#83ccd2 10%, #00a3af 100%);
+  box-shadow: 0 2px 2px #83ccd2;
   border: 0;
 }
 
@@ -428,7 +439,7 @@ footer .copyright {
 }
 .welcome:before {
   content: "";
-  background: url("../../../pages/access/pic/welcome.jpg") no-repeat center center/cover;
+  background: linear-gradient(transparent 70%, #fff), url("../../../pages/access/pic/welcome.jpg") no-repeat center center/cover;
   opacity: 0.7;
   top: 0;
   left: 0;

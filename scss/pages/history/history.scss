@@ -70,7 +70,7 @@
   // }
 
   .history-intro-text {
-    margin: 60px 45px 20px;
+    margin: 60px 100px 20px;
     &__title {
       color: $main-color;
       font-size: 1.3rem;
@@ -155,8 +155,53 @@
   border-radius: 0 0 10px 0;
 }
 
-.col{
-  flex-direction: column;
+.room-one {
+  height: 610px;
+  width: 100%;
+  background: url(../../../pages/history/pic/room1.jpg);
+  background-position: -50px center;
+  background-size: cover;
+  border-radius: 0 0 0 10px;
+}
+
+.room-two {
+  width: 100%;
+  background: url(../../../pages/history/pic/room2.jpg);
+  background-position: center center;
+  background-size: cover;
+  // border-radius: 0 0 0 10px;
+}
+
+.room-three {
+  width: 100%;
+  background: url(../../../pages/history/pic/room3.jpg);
+  background-position: center center;
+  background-size: cover;
+  border-radius: 0 0 10px 0;
+}
+
+.food-one {
+  width: 100%;
+  background: url(../../../pages/history/pic/food1.jpg);
+  background-position: center bottom;
+  background-size: cover;
+  border-radius: 0 0 10px 10px;
+}
+
+.food-two {
+  width: 49.5%;
+  background: url(../../../pages/history/pic/food2.jpg);
+  background-position: center center;
+  background-size: cover;
+  // border-radius: 0 0 0 10px;
+}
+
+.food-three {
+  width: 49.5%;
+  background: url(../../../pages/history/pic/food3.jpg);
+  background-position: center center;
+  background-size: cover;
+  // border-radius: 0 0 10px 0;
 }
 
 @media (min-width: 840px) {
@@ -249,18 +294,36 @@
     }
   }
 
-  .garden-one {
+  .rounded {
     border-radius: 10px;
   }
 
   .garden-two {
     width: 100%;
-    border-radius: 10px;
   }
 
   .garden-three {
     width: 100%;
-    border-radius: 10px;
+  }
+
+  .room-one {
+    width: 100%;
+  }
+
+  .food-two {
+    width: 100%;
+  }
+
+  .food-three {
+    width: 100%;
+  }
+
+  .full-width-rwd {
+    width: 100%;
+  }
+
+  .size-return {
+    height: 300px;
   }
 }
 
