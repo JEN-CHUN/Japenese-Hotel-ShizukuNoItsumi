@@ -39,12 +39,123 @@ main {
 
 .login-menu {
   width: 500px;
-  height: 600px;
+  // height: 600px;
 
   background-color: $white;
 
   box-shadow: 1px 1px 8px 1px $secondary-lighter-blue;
   border-radius: 10px;
+
+  &__wrapper {
+    width: 80%;
+    margin: auto;
+  }
+
+  &__title {
+    color: $main-color;
+    font-size: 23px;
+    text-align: center;
+    margin-top: 25px;
+  }
+
+  &__api {
+    color: $main-color;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    margin-top: 25px;
+    border: 2px solid $secondary-lighter-blue;
+    border-radius: 12px;
+    margin-bottom: 25px;
+  }
+
+  &__pic {
+    width: 30px;
+    vertical-align: bottom;
+  }
+
+  &__label {
+    color: $main-color;
+    margin-bottom: 5px;
+  }
+
+  &__line {
+    margin-bottom: 20px;
+  }
+
+  &__line::before {
+    content: " ";
+    border: 1px solid $secondary-lighter-blue;
+    background-color: $secondary-lighter-blue;
+    margin: auto;
+    display: block;
+    width: 100%;
+  }
+
+  &__input-box {
+    position: relative;
+    width: 100%;
+  }
+
+  &__input {
+    width: 100%;
+    font-size: 1.2rem;
+    color: $main-color;
+    padding: 12px;
+    border: 2px solid $secondary-lighter-blue;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  &__input:focus {
+    outline: none;
+    background-color: $secondary-white-blue;
+  }
+
+  &__label {
+    position: absolute;
+    left: 0;
+    font-size: 1.3rem;
+    padding: 12px;
+    font-weight: 700;
+    color: $secondary-lighter-blue;
+    pointer-events: none;
+  }
+
+  &__input-box &__input:focus ~ label {
+    color: red;
+  }
+
+  &__submit {
+    width: 100%;
+    color: $white;
+    font-size: 1.2rem;
+    padding: 12px;
+    border: 1px;
+    border-radius: 15px;
+    background: linear-gradient($secondary-dark-blue, $main-color);
+    margin-bottom: 8px;
+    cursor: pointer;
+  }
+
+  &__helper {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    a {
+      color: $main-color;
+    }
+
+    a:visited,
+    a:hover,
+    a:focus {
+      color: $main-color;
+    }
+  }
 }
 
 @media (min-width: 840px) {

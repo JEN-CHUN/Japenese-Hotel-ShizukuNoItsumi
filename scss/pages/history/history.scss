@@ -294,6 +294,19 @@
     }
   }
 
+  .gallery {
+    &__title {
+      letter-spacing: 2rem;
+      text-indent: 2rem;
+    }
+  }
+
+  .gallery-card{
+    &__title{
+      border-radius: 10px;
+    }
+  }
+
   .rounded {
     border-radius: 10px;
   }
@@ -345,6 +358,13 @@
   .history {
     .history-intro-text {
       margin: 40px 25px 20px;
+    }
+  }
+
+  .gallery {
+    &__title {
+      letter-spacing: 1.5rem;
+      text-indent: 1.5rem;
     }
   }
 }

@@ -459,10 +459,105 @@ main {
 
 .login-menu {
   width: 500px;
-  height: 600px;
   background-color: #fff;
   box-shadow: 1px 1px 8px 1px #83ccd2;
   border-radius: 10px;
+}
+.login-menu__wrapper {
+  width: 80%;
+  margin: auto;
+}
+.login-menu__title {
+  color: #165e83;
+  font-size: 23px;
+  text-align: center;
+  margin-top: 25px;
+}
+.login-menu__api {
+  color: #165e83;
+  font-weight: 700;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  margin-top: 25px;
+  border: 2px solid #83ccd2;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+.login-menu__pic {
+  width: 30px;
+  vertical-align: bottom;
+}
+.login-menu__label {
+  color: #165e83;
+  margin-bottom: 5px;
+}
+.login-menu__line {
+  margin-bottom: 20px;
+}
+.login-menu__line::before {
+  content: " ";
+  border: 1px solid #83ccd2;
+  background-color: #83ccd2;
+  margin: auto;
+  display: block;
+  width: 100%;
+}
+.login-menu__input-box {
+  position: relative;
+  width: 100%;
+}
+.login-menu__input {
+  width: 100%;
+  font-size: 1.2rem;
+  color: #165e83;
+  padding: 12px;
+  border: 2px solid #83ccd2;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.login-menu__input:focus {
+  outline: none;
+  background-color: #ebf6f7;
+}
+.login-menu__label {
+  position: absolute;
+  left: 0;
+  font-size: 1.3rem;
+  padding: 12px;
+  font-weight: 700;
+  color: #83ccd2;
+  pointer-events: none;
+}
+.login-menu__input-box .login-menu__input:focus ~ label {
+  color: red;
+}
+.login-menu__submit {
+  width: 100%;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 12px;
+  border: 1px;
+  border-radius: 15px;
+  background: linear-gradient(#00a3af, #165e83);
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+.login-menu__helper {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+}
+.login-menu__helper a {
+  color: #165e83;
+}
+.login-menu__helper a:visited,
+.login-menu__helper a:hover,
+.login-menu__helper a:focus {
+  color: #165e83;
 }
 
 @media (min-width: 840px) {
