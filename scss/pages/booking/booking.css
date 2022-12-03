@@ -529,13 +529,14 @@ main {
   border: 1px;
   border-radius: 15px;
   background: linear-gradient(#00a3af, #165e83);
-  margin-bottom: 8px;
+  margin-bottom: 15px;
   cursor: pointer;
 }
 .login-menu__helper {
   display: flex;
   justify-content: space-between;
   font-weight: 700;
+  margin-bottom: 60px;
 }
 .login-menu__helper a {
   color: #165e83;

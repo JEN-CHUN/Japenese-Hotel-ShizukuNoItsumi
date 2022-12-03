@@ -125,7 +125,7 @@ main {
     border: 1px;
     border-radius: 15px;
     background: linear-gradient($secondary-dark-blue, $main-color);
-    margin-bottom: 8px;
+    margin-bottom: 15px;
     cursor: pointer;
   }
 
@@ -133,6 +133,7 @@ main {
     display: flex;
     justify-content: space-between;
     font-weight: 700;
+    margin-bottom: 60px;
     a{
       color: $main-color;
     }
