@@ -506,34 +506,20 @@ main {
   display: block;
   width: 100%;
 }
-.login-menu__input-box {
-  position: relative;
-  width: 100%;
+.login-menu__label {
+  display: block;
+  font-weight: 700;
 }
 .login-menu__input {
   width: 100%;
-  font-size: 1.2rem;
-  color: #165e83;
   padding: 12px;
   border: 2px solid #83ccd2;
   border-radius: 10px;
   margin-bottom: 20px;
 }
-.login-menu__input:focus {
+.login-menu__input-box:focus {
   outline: none;
   background-color: #ebf6f7;
-}
-.login-menu__label {
-  position: absolute;
-  left: 0;
-  font-size: 1.3rem;
-  padding: 12px;
-  font-weight: 700;
-  color: #83ccd2;
-  pointer-events: none;
-}
-.login-menu__input-box .login-menu__input:focus ~ label {
-  color: red;
 }
 .login-menu__submit {
   width: 100%;
@@ -554,9 +540,7 @@ main {
 .login-menu__helper a {
   color: #165e83;
 }
-.login-menu__helper a:visited,
-.login-menu__helper a:hover,
-.login-menu__helper a:focus {
+.login-menu__helper a:visited, .login-menu__helper a:hover, .login-menu__helper a:focus {
   color: #165e83;
 }
 

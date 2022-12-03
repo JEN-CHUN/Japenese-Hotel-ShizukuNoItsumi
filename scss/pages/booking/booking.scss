@@ -83,6 +83,8 @@ main {
     margin-bottom: 5px;
   }
 
+
+
   &__line {
     margin-bottom: 20px;
   }
@@ -96,41 +98,26 @@ main {
     width: 100%;
   }
 
-  &__input-box {
-    position: relative;
-    width: 100%;
+  &__label {
+    display: block;
+    font-weight: 700;
   }
 
-  &__input {
+
+  &__input{
     width: 100%;
-    font-size: 1.2rem;
-    color: $main-color;
     padding: 12px;
     border: 2px solid $secondary-lighter-blue;
     border-radius: 10px;
     margin-bottom: 20px;
   }
 
-  &__input:focus {
+  &__input-box:focus{
     outline: none;
     background-color: $secondary-white-blue;
   }
 
-  &__label {
-    position: absolute;
-    left: 0;
-    font-size: 1.3rem;
-    padding: 12px;
-    font-weight: 700;
-    color: $secondary-lighter-blue;
-    pointer-events: none;
-  }
-
-  &__input-box &__input:focus ~ label {
-    color: red;
-  }
-
-  &__submit {
+  &__submit{
     width: 100%;
     color: $white;
     font-size: 1.2rem;
@@ -142,17 +129,15 @@ main {
     cursor: pointer;
   }
 
-  &__helper {
+  &__helper{
     display: flex;
     justify-content: space-between;
     font-weight: 700;
-    a {
+    a{
       color: $main-color;
     }
 
-    a:visited,
-    a:hover,
-    a:focus {
+    a:visited, a:hover, a:focus{
       color: $main-color;
     }
   }
