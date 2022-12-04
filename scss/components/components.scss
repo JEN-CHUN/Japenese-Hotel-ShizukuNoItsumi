@@ -91,6 +91,16 @@
     margin-top: 25px;
   }
 
+  &__paragraph{
+    color: $main-color;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    line-height: 1.5rem;
+    font-weight: 700;
+  }
+
   &__api {
     color: $main-color;
     font-weight: 700;
@@ -170,6 +180,7 @@
     accent-color: $secondary-lighter-blue;
     background-color: $white;
     font-weight: 700;
+    margin-bottom: 15px;
 
     &__input{
       width: 20px;

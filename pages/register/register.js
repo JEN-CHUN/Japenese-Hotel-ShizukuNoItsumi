@@ -8,10 +8,20 @@
 // }
 function selectOnlyThis(id){
     let checkBoxs = document.querySelectorAll(".form-menu__checkbox__input");
-
+    
     for (let i = 0; i < checkBoxs.length; i++) {
         checkBoxs[i].checked = false;
     }
     document.getElementById(id).checked = true;
 
 }
+
+const checkBoxGroup = document.querySelectorAll(".form-menu__checkbox__input");
+
+for (var i = 0; i < checkBoxGroup.length; i++) {
+    checkBoxGroup[i].addEventListener("click", function() {
+        selectOnlyThis(this.id);
+    });
+  }
+
+console.log(checkBoxGroup)

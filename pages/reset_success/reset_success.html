@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>雫ノ泉 京都｜和風ホテル【公式】</title>
-    <link rel="stylesheet" href="../../scss/pages/register/register.css" />
+    <link
+      rel="stylesheet"
+      href="../../scss/pages/reset_success/reset_success.css"
+    />
   </head>
   <body>
     <header>
@@ -64,118 +67,29 @@
     <main>
       <form class="form-menu" action="javascript:void(0)">
         <div class="form-menu__wrapper">
-          <h3 class="form-menu__title">電子信箱</h3>
-
+          <h3 class="form-menu__title">信件已送出</h3>
+          <p class="form-menu__paragraph">
+            我們會寄一封信給您，<br />
+            裡面含有可以重新設定您的密碼的連結。
+          </p>
+<!-- 
           <div class="form-menu__input-box">
             <label class="form-menu__label" for="email">電子信箱</label>
             <input
               class="form-menu__input"
               type="email"
               required="required"
-              name="email"
-              id="email"
-              placeholder="example@example.com"
+              name=""
+              id=""
             />
-          </div>
-          <div class="form-menu__input-box">
-            <label class="form-menu__label" for="password">密碼</label>
-            <input
-              class="form-menu__input"
-              type="password"
-              required="required"
-              name="password"
-              placeholder="請輸入密碼"
-            />
-          </div>
-          <div class="form-menu__input-box">
-            <label class="form-menu__label" for="password">確認密碼</label>
-            <input
-              class="form-menu__input"
-              type="password"
-              placeholder="請再次輸入密碼"
-              required="required"
-            />
-          </div>
+          </div> -->
 
-          <p class="form-menu__line"></p>
-          <div class="form-menu__input-box flex flex-between">
-            <label class="form-menu__label w-100" for="password">姓名</label>
-            <input
-              class="form-menu__input w-48-5"
-              type="text"
-              required="required"
-              placeholder="姓氏"
-              name="surname"
-            />
-            <input
-              class="form-menu__input w-48-5"
-              type="text"
-              placeholder="名字"
-              required="required"
-            />
-          </div>
-          <div class="div">
-            <label class="form-menu__label">性別</label>
-            <div class="form-menu__input-box flex gender-gap">
-              <div
-                class="form-menu__checkbox flex justify-content-center align-item-center gap-10"
-              >
-                <input
-                  class="form-menu__checkbox__input gender_input"
-                  type="checkbox"
-                  id="male"
-                  name="gender"
-                  checked
-                />
-                <label for="male" class="form-menu__checkbox__label"
-                  >男性</label
-                >
-              </div>
-              <div
-                class="form-menu__checkbox flex justify-content-center align-item-center gap-10"
-              >
-                <input
-                  class="form-menu__checkbox__input gender_input"
-                  type="checkbox"
-                  id="female"
-                  name="gender"
-                />
-                <label for="female" class="form-menu__checkbox__label"
-                  >女性</label
-                >
-              </div>
-            </div>
-          </div>
-          <div class="form-menu__input-box">
-            <label class="form-menu__label" for="password">聯絡電話</label>
-            <input
-              class="form-menu__input"
-              type="text"
-              required="required"
-              name="phone"
-              placeholder="請輸入電話號碼"
-            />
-          </div>
-          <div class="form-menu__input-box">
-            <label class="form-menu__label" for="password">聯絡地址</label>
-            <input
-              class="form-menu__input"
-              type="text"
-              required="required"
-              name="address"
-              placeholder="請輸入地址"
-            />
-          </div>
-          <button class="form-menu__submit" type="submit">登入</button>
-
-          <div class="form-menu__helper">
-            <small class="form-menu__helper__icon"
-              ><a href="javascript: history.go(-1)">返回前頁</a></small
-            >
-            <small class="form-menu__helper__icon"
-              ><a href="">會員登入</a></small
-            >
-          </div>
+          <!-- <button class="form-menu__submit" type="submit">送出</button> -->
+          <a href="javascript: history.go(-1)">
+            <div class="form-menu__helper flex-center text-center">
+              <small class="form-menu__submit">返回登入頁</small>
+            </div></a
+          >
         </div>
       </form>
     </main>
@@ -226,6 +140,6 @@
     </footer>
 
     <script src="../../js/nav.js"></script>
-    <script src="./register.js"></script>
+    <script src="./reset_success.js"></script>
   </body>
 </html>
