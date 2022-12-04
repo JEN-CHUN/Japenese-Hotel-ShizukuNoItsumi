@@ -1,21 +1,21 @@
 @import "../color/colors.scss";
 
 .welcome {
-    height: 40vh;
-    // background: url(../../index/pic/welcome.jpg) no-repeat center center/ cover;
-    // background-color: antiquewhite;
-    position: relative;
-    &__title {
-        width: 100%;
-        font-size: 1.8rem;
-        color: $main-color;
-        text-align: center;
-        line-height: 72px;
-        transition: all 0.5s;
-        position: absolute;
-        inset: 25% 0;
-        margin: 0 auto;
-    }
+  height: 40vh;
+  // background: url(../../index/pic/welcome.jpg) no-repeat center center/ cover;
+  // background-color: antiquewhite;
+  position: relative;
+  &__title {
+    width: 100%;
+    font-size: 1.8rem;
+    color: $main-color;
+    text-align: center;
+    line-height: 72px;
+    transition: all 0.5s;
+    position: absolute;
+    inset: 25% 0;
+    margin: 0 auto;
+  }
 }
 
 // .welcome:before {
@@ -42,140 +42,209 @@
 // }
 
 .scroll-section {
-    width: 85%;
+  width: 85%;
+  display: flex;
+  align-items: center;
+  height: 160px;
+  margin: auto;
+  margin-bottom: 120px;
+  ul {
     display: flex;
-    align-items: center;
-    height: 160px;
-    margin: auto;
-    margin-bottom: 120px;
-    ul {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        text-align: center;
-        width: 100%;
-
-        li {
-            width: 24%;
-        }
-        a {
-            color: $white;
-            display: inline-block;
-            width: 80%;
-            gap: 10px;
-            padding: 8px 0;
-            border-radius: 10px;
-            background-color: $main-color;
-        }
-    }
-}
-
-.flex {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.flex-col {
-    flex-direction: column;
-}
-
-.flex-between {
     justify-content: space-between;
-}
-
-.flex-around {
-    justify-content: space-around;
-}
-
-.h-100 {
-    height: 100%;
-}
-
-.w-100 {
+    flex-wrap: wrap;
+    text-align: center;
     width: 100%;
+
+    li {
+      width: 24%;
+    }
+    a {
+      color: $white;
+      display: inline-block;
+      width: 80%;
+      gap: 10px;
+      padding: 8px 0;
+      border-radius: 10px;
+      background-color: $main-color;
+    }
+  }
 }
 
-.w-50 {
-    width: 50%;
-}
+.form-menu {
+  width: 500px;
+  // height: 600px;
 
-.w-49-5 {
-    width: 49.5%;
-}
+  background-color: $white;
 
-.w-49 {
-    width: 49%;
-}
+  box-shadow: 1px 1px 8px 1px $secondary-lighter-blue;
+  border-radius: 10px;
 
-.w-48 {
-    width: 48%;
-}
+  &__wrapper {
+    width: 80%;
+    margin: auto;
+  }
 
-.w-40 {
-    width: 40%;
-}
+  &__title {
+    color: $main-color;
+    font-size: 23px;
+    text-align: center;
+    margin-top: 25px;
+  }
 
-.order-0 {
-    order: 0;
-}
+  &__api {
+    color: $main-color;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    margin-top: 25px;
+    border: 2px solid $secondary-lighter-blue;
+    border-radius: 12px;
+    margin-bottom: 25px;
+  }
 
-.order-1 {
-    order: 1;
-}
+  &__pic {
+    width: 30px;
+    vertical-align: bottom;
+  }
 
-.order-2 {
-    order: 2;
-}
+  &__input-box {
+    margin-bottom: 12px;
+  }
 
-.order-3 {
-    order: 3;
-}
+  &__label {
+    display: inline-block;
+    color: $main-color;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
 
-.order-4 {
-    order: 4;
-}
+  &__line {
+    margin-bottom: 20px;
+  }
 
-.order-5 {
-    order: 5;
+  &__line::before {
+    content: " ";
+    border: 1px solid $secondary-lighter-blue;
+    background-color: $secondary-lighter-blue;
+    margin: auto;
+    display: block;
+    width: 100%;
+  }
+
+  &__input {
+    color: $secondary-dark-blue;
+    width: 100%;
+    padding: 12px;
+    border: 2px solid $secondary-lighter-blue;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  &__input::placeholder {
+    color: $secondary-dark-blue;
+  }
+
+  &__input:focus {
+    outline: none;
+    background-color: $secondary-white-blue;
+  }
+
+  &__submit {
+    width: 100%;
+    color: $white;
+    font-size: 1.2rem;
+    padding: 12px;
+    border: 1px;
+    border-radius: 15px;
+    background: linear-gradient($secondary-dark-blue, $main-color);
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+
+  &__checkbox{
+    color: $main-color;
+    accent-color: $secondary-lighter-blue;
+    background-color: $white;
+    font-weight: 700;
+
+    &__input{
+      width: 20px;
+      height: 20px;
+      border-color: $secondary-lighter-blue;
+      border-radius: 0;
+      border: 2px solid $secondary-lighter-blue;
+      outline: none;
+      
+    }
+  }
+
+  &__helper {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    margin-bottom: 60px;
+    a {
+      color: $main-color;
+    }
+
+    a:visited,
+    a:hover,
+    a:focus {
+      color: $main-color;
+    }
+  }
 }
 
 @media (max-width: 576px) {
-    .welcome {
-        &__title {
-            font-size: 1.6rem;
-        }
+  .welcome {
+    &__title {
+      font-size: 1.6rem;
     }
+  }
 }
 
+
+@media (max-width: 500px) {
+  .form-menu{
+    width: 90%;
+  }
+}
+
+
 @mixin welcome-setting($picutre, $opacity) {
-    content: "";
-    background: linear-gradient(transparent 70%, $white),url($picutre) no-repeat center center/ cover;
-    // background-attachment: fixed;
-    opacity: $opacity;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
+  content: "";
+  background: linear-gradient(transparent 70%, $white),
+    url($picutre) no-repeat center center/ cover;
+  // background-attachment: fixed;
+  opacity: $opacity;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 @mixin welcome-title-position($left, $top) {
-    left: $left;
-    top: $top;
+  left: $left;
+  top: $top;
 }
 
 @mixin section-button-flex($li-percentage, $button-length, $button-distance) {
-    .scroll-section {
-        ul {
-            li {
-                width: $li-percentage;
-            }
+  .scroll-section {
+    ul {
+      li {
+        width: $li-percentage;
+      }
 
-            a {
-                width: $button-length;
-                margin: $button-distance;
-            }
-        }
+      a {
+        width: $button-length;
+        margin: $button-distance;
+      }
     }
+  }
 }
