@@ -41,18 +41,18 @@
 }
 
 .triangle-up {
-	width: 0;
-	height: 0;
-	border-left: 15px solid transparent;
-	border-right: 15px solid transparent;
-	border-bottom: 30px solid #555;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 30px solid #555;
 }
 
-.text-white{
+.text-white {
     color: $white;
 }
 
-.text-center{
+.text-center {
     text-align: center;
 }
 
@@ -73,8 +73,12 @@
     justify-content: space-around;
 }
 
-.flex-center{
+.flex-center {
     justify-content: center;
+}
+
+.flex-end {
+    justify-content: flex-end;
 }
 
 .h-100 {
@@ -137,16 +141,20 @@
     order: 5;
 }
 
-.gap-10{
+.gap-10 {
     gap: 10px;
 }
 
-.justify-content-center{
+.justify-content-center {
     justify-content: center;
 }
 
-.align-item-center{
+.align-item-center {
     align-items: center;
+}
+
+.align-item-top {
+    align-items: baseline !important;
 }
 
 @media (max-width: 998px) {

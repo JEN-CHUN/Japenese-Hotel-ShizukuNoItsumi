@@ -62,122 +62,124 @@
     </div>
 
     <main>
-      <form class="form-menu" action="javascript:void(0)">
-        <div class="form-menu__wrapper">
-          <h3 class="form-menu__title">電子信箱</h3>
+      <div class="flex-wrapper form-menu-pt">
+        <form class="form-menu" action="javascript:void(0)">
+          <div class="form-menu__wrapper">
+            <h3 class="form-menu__title">電子信箱</h3>
 
-          <div class="form-menu__input-box">
-            <label class="form-menu__label" for="email">電子信箱</label>
-            <input
-              class="form-menu__input"
-              type="email"
-              required="required"
-              name="email"
-              id="email"
-              placeholder="example@example.com"
-            />
-          </div>
-          <div class="form-menu__input-box">
-            <label class="form-menu__label" for="password">密碼</label>
-            <input
-              class="form-menu__input"
-              type="password"
-              required="required"
-              name="password"
-              placeholder="請輸入密碼"
-            />
-          </div>
-          <div class="form-menu__input-box">
-            <label class="form-menu__label" for="password">確認密碼</label>
-            <input
-              class="form-menu__input"
-              type="password"
-              placeholder="請再次輸入密碼"
-              required="required"
-            />
-          </div>
+            <div class="form-menu__input-box">
+              <label class="form-menu__label" for="email">電子信箱</label>
+              <input
+                class="form-menu__input"
+                type="email"
+                required="required"
+                name="email"
+                id="email"
+                placeholder="example@example.com"
+              />
+            </div>
+            <div class="form-menu__input-box">
+              <label class="form-menu__label" for="password">密碼</label>
+              <input
+                class="form-menu__input"
+                type="password"
+                required="required"
+                name="password"
+                placeholder="請輸入密碼"
+              />
+            </div>
+            <div class="form-menu__input-box">
+              <label class="form-menu__label" for="password">確認密碼</label>
+              <input
+                class="form-menu__input"
+                type="password"
+                placeholder="請再次輸入密碼"
+                required="required"
+              />
+            </div>
 
-          <p class="form-menu__line"></p>
-          <div class="form-menu__input-box flex flex-between">
-            <label class="form-menu__label w-100" for="password">姓名</label>
-            <input
-              class="form-menu__input w-48-5"
-              type="text"
-              required="required"
-              placeholder="姓氏"
-              name="surname"
-            />
-            <input
-              class="form-menu__input w-48-5"
-              type="text"
-              placeholder="名字"
-              required="required"
-            />
-          </div>
-          <div class="div">
-            <label class="form-menu__label">性別</label>
-            <div class="form-menu__input-box flex gender-gap">
-              <div
-                class="form-menu__checkbox flex justify-content-center align-item-center gap-10"
-              >
-                <input
-                  class="form-menu__checkbox__input gender_input"
-                  type="checkbox"
-                  id="male"
-                  name="gender"
-                  checked
-                />
-                <label for="male" class="form-menu__checkbox__label"
-                  >男性</label
+            <p class="form-menu__line"></p>
+            <div class="form-menu__input-box flex flex-between">
+              <label class="form-menu__label w-100" for="password">姓名</label>
+              <input
+                class="form-menu__input w-48-5"
+                type="text"
+                required="required"
+                placeholder="姓氏"
+                name="surname"
+              />
+              <input
+                class="form-menu__input w-48-5"
+                type="text"
+                placeholder="名字"
+                required="required"
+              />
+            </div>
+            <div class="div">
+              <label class="form-menu__label">性別</label>
+              <div class="form-menu__input-box flex gender-gap">
+                <div
+                  class="form-menu__checkbox flex justify-content-center align-item-center gap-10"
                 >
-              </div>
-              <div
-                class="form-menu__checkbox flex justify-content-center align-item-center gap-10"
-              >
-                <input
-                  class="form-menu__checkbox__input gender_input"
-                  type="checkbox"
-                  id="female"
-                  name="gender"
-                />
-                <label for="female" class="form-menu__checkbox__label"
-                  >女性</label
+                  <input
+                    class="form-menu__checkbox__input gender_input"
+                    type="checkbox"
+                    id="male"
+                    name="gender"
+                    checked
+                  />
+                  <label for="male" class="form-menu__checkbox__label"
+                    >男性</label
+                  >
+                </div>
+                <div
+                  class="form-menu__checkbox flex justify-content-center align-item-center gap-10"
                 >
+                  <input
+                    class="form-menu__checkbox__input gender_input"
+                    type="checkbox"
+                    id="female"
+                    name="gender"
+                  />
+                  <label for="female" class="form-menu__checkbox__label"
+                    >女性</label
+                  >
+                </div>
               </div>
             </div>
-          </div>
-          <div class="form-menu__input-box">
-            <label class="form-menu__label" for="password">聯絡電話</label>
-            <input
-              class="form-menu__input"
-              type="text"
-              required="required"
-              name="phone"
-              placeholder="請輸入電話號碼"
-            />
-          </div>
-          <div class="form-menu__input-box">
-            <label class="form-menu__label" for="password">聯絡地址</label>
-            <input
-              class="form-menu__input"
-              type="text"
-              required="required"
-              name="address"
-              placeholder="請輸入地址"
-            />
-          </div>
-          <button class="form-menu__submit" type="submit">登入</button>
+            <div class="form-menu__input-box">
+              <label class="form-menu__label" for="password">聯絡電話</label>
+              <input
+                class="form-menu__input"
+                type="text"
+                required="required"
+                name="phone"
+                placeholder="請輸入電話號碼"
+              />
+            </div>
+            <div class="form-menu__input-box">
+              <label class="form-menu__label" for="password">聯絡地址</label>
+              <input
+                class="form-menu__input"
+                type="text"
+                required="required"
+                name="address"
+                placeholder="請輸入地址"
+              />
+            </div>
+            <button class="form-menu__submit" type="submit">登入</button>
 
-          <div class="form-menu__helper">
-            <small class="form-menu__helper__icon"
-              ><a href="javascript: history.go(-1)">返回前頁</a></small
-            >
-            <small class="form-menu__helper__icon"
-              ><a href="">會員登入</a></small
-            >
+            <div class="form-menu__helper">
+              <small class="form-menu__helper__icon"
+                ><a href="javascript: history.go(-1)">返回前頁</a></small
+              >
+              <small class="form-menu__helper__icon"
+                ><a href="">會員登入</a></small
+              >
+            </div>
           </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </main>
 
     <footer>

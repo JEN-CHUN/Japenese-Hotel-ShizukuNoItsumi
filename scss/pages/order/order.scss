@@ -1,0 +1,234 @@
+@import "../../NavFooter/nav.scss";
+@import "../../NavFooter/footer.scss";
+@import "../../components/components.scss";
+@import "../../utili/utili.scss";
+@import "../../media/media.scss";
+
+header {
+  background-color: $white;
+  box-shadow: 10px 0px 100px 1px $secondary-lighter-blue;
+  .nav-item {
+    a {
+      color: $main-color;
+    }
+  }
+}
+
+.hamburger {
+  .bar {
+    background-color: $main-color;
+  }
+}
+
+// .login-wrapper {
+//   position: relative;
+
+//   width: 100vw;
+//   min-height: calc(100vh - 60px);
+//   // border-bottom: 1px solid $white;
+//   background-color: $secondary-white-blue;
+// }
+
+main {
+  background-color: $secondary-white-blue;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 100px;
+  padding-top: 80px;
+  margin-bottom: 60px;
+  position: relative;
+
+  &__line::after {
+    position: absolute;
+    top: 50%;
+    content: "";
+    border: 1px solid $main-color;
+    background-color: $main-color;
+    margin: auto;
+    display: block;
+    text-align: right;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &__box-group {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: -1%;
+    left: 0;
+    z-index: 2;
+  }
+
+  &__box {
+    position: relative;
+    top: 40%;
+    width: 30px;
+    height: 30px;
+    background-color: $main-color;
+    border-radius: 3px;
+  }
+
+  &__text {
+    position: absolute;
+    color: $main-color;
+    width: 70px;
+    top: 120%;
+    left: -65%;
+  }
+
+  &__mark {
+    position: absolute;
+    font-size: 20px;
+    font-weight: 700;
+    color: $white;
+    top: 0%;
+    left: 25%;
+  }
+}
+
+.form-menu-mt {
+  margin-top: 30px;
+}
+
+.form-menu {
+  &__title {
+    margin-top: 100px;
+  }
+  &__submit {
+    color: $white;
+    margin-top: 80px;
+    font-weight: 500;
+  }
+}
+
+.abosolute-two-word {
+  left: -2.5%;
+}
+
+.wrapper {
+  // display: flex;
+  // justify-content: center;
+  // align-items: baseline;
+  width: 70%;
+  margin: auto;
+  min-height: 100vh;
+}
+
+.section-title {
+  background-color: $white;
+  padding: 20px 50px;
+  font-weight: 700;
+}
+
+.greeting {
+  margin-bottom: 80px;
+  &__hello {
+    flex: 1;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  &__logout {
+    font-size: 1.2rem;
+  }
+  &__href {
+    color: $main-color;
+  }
+}
+
+.room {
+  &__title {
+    color: $main-color;
+    font-size: 1.5rem;
+    text-align: center;
+    flex: 1;
+    a{
+      color: $main-color;
+    }
+  }
+}
+
+.rounded-radius-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.rounded-radius-bottom {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.main-color-shadow {
+  box-shadow: 1px 1px 8px 1px #83ccd2;
+}
+
+.text-gray {
+  color: gray;
+}
+
+.gray {
+  background-color: gray;
+}
+
+.none {
+  display: none;
+}
+
+@media (min-width: 840px) {
+  .welcome {
+    &__title {
+      br {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .welcome {
+    &__title {
+      font-size: 1.8rem;
+      @include welcome-title-position(30%, 80%);
+    }
+  }
+}
+
+@media (max-width: 998px) {
+  .welcome {
+    &__title {
+      font-size: 1.8rem;
+      @include welcome-title-position(25%, 80%);
+    }
+  }
+
+  @include section-button-flex(33.33%, 70%, 10px);
+}
+
+@media (max-width: 840px) {
+  .welcome {
+    &__title {
+      font-size: 1.8rem;
+      @include welcome-title-position(30%, 80%);
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .welcome {
+    &__title {
+      font-size: 1.8rem;
+      @include welcome-title-position(20%, 80%);
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .welcome {
+    &__title {
+      font-size: 1.6rem;
+      @include welcome-title-position(0%, 80%);
+    }
+  }
+}

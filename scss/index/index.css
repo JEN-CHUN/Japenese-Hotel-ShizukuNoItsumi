@@ -265,6 +265,14 @@ footer .copyright {
   border-bottom: 30px solid #555;
 }
 
+.text-white {
+  color: #fff;
+}
+
+.text-center {
+  text-align: center;
+}
+
 .flex {
   display: flex;
   flex-wrap: wrap;
@@ -284,6 +292,10 @@ footer .copyright {
 
 .flex-center {
   justify-content: center;
+}
+
+.flex-end {
+  justify-content: flex-end;
 }
 
 .h-100 {
@@ -356,6 +368,10 @@ footer .copyright {
 
 .align-item-center {
   align-items: center;
+}
+
+.align-item-top {
+  align-items: baseline !important;
 }
 
 @media (max-width: 998px) {
@@ -508,8 +524,13 @@ footer .copyright {
   background-color: #165e83;
 }
 
+.form-menu-pt {
+  padding-top: 150px;
+}
+
 .form-menu {
   width: 500px;
+  height: 100%;
   background-color: #fff;
   box-shadow: 1px 1px 8px 1px #83ccd2;
   border-radius: 10px;
