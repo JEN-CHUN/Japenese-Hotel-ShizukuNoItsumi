@@ -2,165 +2,256 @@
 
 // 前言
 .foreword {
-    width: 80%;
-    margin: auto;
-    margin-top: 56px;
-    margin-bottom: 72px;
+  width: 80%;
+  margin: auto;
+  margin-top: 56px;
+  margin-bottom: 72px;
+  text-align: center;
+  &__paragraph {
+    margin-top: 20px;
+  }
+
+  &__paragraph:last-of-type {
+    margin-bottom: 28px;
+  }
+
+  //按鈕的位置調整置中
+  .button-div {
     text-align: center;
-    &__paragraph {
-        margin-top: 20px;
-    }
 
-    &__paragraph:last-of-type {
-        margin-bottom: 28px;
+    // 按鈕的高度調整
+    .page-button {
+      margin-top: 20px;
     }
-
-    //按鈕的位置調整置中
-    .button-div {
-        text-align: center;
-
-        // 按鈕的高度調整
-        .page-button {
-            margin-top: 20px;
-        }
-    }
+  }
 }
 
 .page-button {
-    display: inline-block;
-    width: 200px;
-    height: 50px;
-    text-align: center;
-    color: $white;
-    line-height: 50px;
-    font-size: 1.2rem;
-    border-radius: 50px;
-    background: linear-gradient($secondary-lighter-blue 10%, $secondary-dark-blue 100%);
-    box-shadow: 0 2px 2px $secondary-lighter-blue;
-    border: 0;
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  color: $white;
+  line-height: 50px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  background: linear-gradient(
+    $secondary-lighter-blue 10%,
+    $secondary-dark-blue 100%
+  );
+  box-shadow: 0 2px 2px $secondary-lighter-blue;
+  border: 0;
 }
 
 .triangle-up {
-    width: 0;
-    height: 0;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-bottom: 30px solid #555;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 30px solid #555;
 }
 
 .text-white {
-    color: $white;
+  color: $white;
 }
 
 .text-center {
-    text-align: center;
+  text-align: center;
+}
+
+.text-500 {
+  font-weight: 500;
+}
+
+.none {
+  display: none;
+}
+
+.mt-0 {
+  margin-top: 0px !important;
+}
+
+.mt-30{
+    margin-top: 30px;
+}
+
+.mb-0 {
+  margin-bottom: 0px !important;
+}
+
+.mb-10 {
+  margin-bottom: 10px !important;
+}
+
+.mb-20 {
+  margin-bottom: 20px !important;
+}
+
+.mb-30 {
+  margin-bottom: 30px !important;
+}
+
+.mb-40 {
+  margin-bottom: 40px !important;
+}
+
+.mb-50 {
+  margin-bottom: 50px !important;
+}
+
+.mb-60 {
+  margin-bottom: 60px !important;
+}
+
+.pb-60 {
+  padding-bottom: 60px !important;
+}
+
+.m-none {
+  margin: 0px;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.block {
+  display: block;
 }
 
 .flex {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
 }
 
 .flex-col {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .flex-between {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .flex-around {
-    justify-content: space-around;
+  justify-content: space-around;
 }
 
 .flex-center {
-    justify-content: center;
+  justify-content: center;
 }
 
 .flex-end {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .h-100 {
-    height: 100%;
+  height: 100%;
 }
 
 .w-100 {
-    width: 100%;
+  width: 100%;
 }
 
 .w-50 {
-    width: 50%;
+  width: 50%;
 }
 
 .w-49-5 {
-    width: 49.5%;
+  width: 49.5%;
 }
 
 .w-49 {
-    width: 49%;
+  width: 49%;
 }
 
 .w-48-5 {
-    width: 48.5%;
+  width: 48.5%;
 }
 
 .w-48 {
-    width: 48%;
+  width: 48%;
 }
 
 .w-45 {
-    width: 45%;
+  width: 45%;
 }
 
 .w-40 {
-    width: 40%;
+  width: 40%;
 }
 
 .order-0 {
-    order: 0;
+  order: 0 !important;
 }
 
 .order-1 {
-    order: 1;
+  order: 1 !important;
 }
 
 .order-2 {
-    order: 2;
+  order: 2 !important;
 }
 
 .order-3 {
-    order: 3;
+  order: 3 !important;
 }
 
 .order-4 {
-    order: 4;
+  order: 4 !important;
 }
 
 .order-5 {
-    order: 5;
+  order: 5 !important;
 }
 
 .gap-10 {
-    gap: 10px;
+  gap: 10px;
+}
+
+.gap-20 {
+  gap: 20px;
 }
 
 .justify-content-center {
-    justify-content: center;
+  justify-content: center;
 }
 
 .align-item-center {
-    align-items: center;
+  align-items: center;
 }
 
 .align-item-top {
-    align-items: baseline !important;
+  align-items: baseline !important;
+}
+
+.rounded-radius-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.rounded-radius-bottom {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.rounded-radius-left {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.rounded-radius-right {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 @media (max-width: 998px) {
-    .welcome {
-        &__title {
-            font-size: 1.4rem;
-        }
+  .welcome {
+    &__title {
+      font-size: 1.4rem;
     }
+  }
 }
