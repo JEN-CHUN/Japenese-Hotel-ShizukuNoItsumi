@@ -802,6 +802,8 @@ main {
   flex: 1;
   text-align: center;
   font-size: 1.5rem;
+  color: #165e83;
+  text-align: center;
 }
 .greeting__logout {
   font-size: 1.2rem;
@@ -948,13 +950,14 @@ main {
 }
 .choose__room-img {
   width: 300px;
-  min-height: 450px;
+  height: 450px;
   background-color: darkblue;
   border-radius: 10px 0 0 10px;
 }
 .choose__room-info {
   width: calc(100% - 300px);
   padding: 30px 50px;
+  padding-bottom: 0;
 }
 .choose__room-title {
   width: 100%;
@@ -966,7 +969,7 @@ main {
   margin-bottom: 15px;
 }
 .choose__room-description {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-bottom: 20px;
 }
 .choose__room-items {
@@ -987,11 +990,14 @@ main {
 }
 .choose__room-caution {
   color: #165e83;
+  background-color: #ebf6f7;
   width: 100%;
+  padding: 5px;
   justify-content: flex-end;
   gap: 10px;
   align-items: center;
   margin-bottom: 20px;
+  border-radius: 8px;
 }
 .choose .number-selector {
   width: 100%;
@@ -1153,7 +1159,7 @@ main {
   }
   .greeting__hello {
     width: 100%;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     margin-bottom: 10px;
   }
   .greeting__logout {

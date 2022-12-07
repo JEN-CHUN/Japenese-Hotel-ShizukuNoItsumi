@@ -63,7 +63,7 @@
 
     <main>
       <div class="flex-wrapper form-menu-pt">
-        <form class="form-menu" action="javascript:void(0)">
+        <form class="form-menu" action="../sign_up_success/sign_up_success.html">
           <div class="form-menu__wrapper">
             <h3 class="form-menu__title">電子信箱</h3>
 
@@ -85,14 +85,17 @@
                 type="password"
                 required="required"
                 name="password"
+                id="password"
                 placeholder="請輸入密碼"
               />
             </div>
             <div class="form-menu__input-box">
-              <label class="form-menu__label" for="password">確認密碼</label>
+              <label class="form-menu__label" for="password-check">確認密碼</label>
               <input
                 class="form-menu__input"
                 type="password"
+                name="password-check"
+                id="password-check"
                 placeholder="請再次輸入密碼"
                 required="required"
               />
@@ -100,10 +103,12 @@
 
             <p class="form-menu__line"></p>
             <div class="form-menu__input-box flex flex-between">
-              <label class="form-menu__label w-100" for="password">姓名</label>
+              <label class="form-menu__label w-100" for="name-first">姓名</label>
               <input
                 class="form-menu__input w-48-5"
                 type="text"
+                name="name-first"
+                id="name-first"
                 required="required"
                 placeholder="姓氏"
                 name="surname"
@@ -111,12 +116,14 @@
               <input
                 class="form-menu__input w-48-5"
                 type="text"
+                name="name-last"
+                id="name-last"
                 placeholder="名字"
                 required="required"
               />
             </div>
             <div class="div">
-              <label class="form-menu__label">性別</label>
+              <label class="form-menu__label" for="gender">性別</label>
               <div class="form-menu__input-box flex gender-gap">
                 <div
                   class="form-menu__checkbox flex justify-content-center align-item-center gap-10"
@@ -148,22 +155,24 @@
               </div>
             </div>
             <div class="form-menu__input-box">
-              <label class="form-menu__label" for="password">聯絡電話</label>
+              <label class="form-menu__label" for="phone">聯絡電話</label>
               <input
                 class="form-menu__input"
                 type="text"
                 required="required"
                 name="phone"
+                id="phone"
                 placeholder="請輸入電話號碼"
               />
             </div>
             <div class="form-menu__input-box">
-              <label class="form-menu__label" for="password">聯絡地址</label>
+              <label class="form-menu__label" for="address">聯絡地址</label>
               <input
                 class="form-menu__input"
                 type="text"
                 required="required"
                 name="address"
+                id="address"
                 placeholder="請輸入地址"
               />
             </div>
@@ -174,7 +183,7 @@
                 ><a href="javascript: history.go(-1)">返回前頁</a></small
               >
               <small class="form-menu__helper__icon"
-                ><a href="">會員登入</a></small
+                ><a href="../booking/booking.html">會員登入</a></small
               >
             </div>
           </div>

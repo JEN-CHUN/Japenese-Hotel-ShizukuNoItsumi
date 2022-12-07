@@ -127,6 +127,8 @@ main {
     flex: 1;
     text-align: center;
     font-size: 1.5rem;
+    color: $main-color;
+    text-align: center;
   }
   &__logout {
     font-size: 1.2rem;
@@ -296,12 +298,13 @@ main {
   &__room-group {
     justify-content: space-between;
     // background-color: #4e230b;
+    // border: 1px solid $secondary-lighter-blue;
     border-radius: 10px;
   }
 
   &__room-img {
     width: 300px;
-    min-height: 450px;
+    height: 450px;
     background-color: darkblue;
     border-radius: 10px 0 0 10px;
   }
@@ -309,6 +312,7 @@ main {
   &__room-info {
     width: calc(100% - (300px));
     padding: 30px 50px;
+    padding-bottom: 0;
   }
 
   &__room-title {
@@ -321,7 +325,7 @@ main {
     margin-bottom: 15px;
   }
   &__room-description {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin-bottom: 20px;
   }
 
@@ -345,11 +349,14 @@ main {
 
   &__room-caution {
     color: $main-color;
+    background-color: $secondary-white-blue;
     width: 100%;
+    padding: 5px;
     justify-content: flex-end;
     gap: 10px;
     align-items: center;
     margin-bottom: 20px;
+    border-radius: 8px;
   }
 
   .number-selector {
@@ -364,8 +371,8 @@ main {
 }
 
 .return {
-    color: $main-color;
-    font-size: 1.2rem;
+  color: $main-color;
+  font-size: 1.2rem;
 }
 
 .main-color-shadow {
@@ -546,7 +553,8 @@ main {
   .greeting {
     &__hello {
       width: 100%;
-      font-size: 1.3rem;
+      font-size: 1.5rem;
+
       margin-bottom: 10px;
     }
     &__logout {

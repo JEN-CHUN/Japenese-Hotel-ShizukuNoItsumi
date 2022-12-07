@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>雫ノ泉 京都｜和風ホテル【公式】</title>
+    <link rel="stylesheet" href="../../scss/pages/order/order.css" />
     <link
       rel="stylesheet"
-      href="../../scss/pages/sign_up_success/sign_up_success.css"
+      href="../../scss/pages/order/order_complete/order_complete.css"
     />
   </head>
   <body>
@@ -65,11 +66,40 @@
     </div>
 
     <main>
+      <div class="progress-bar">
+        <div class="progress-bar__box-group flex flex-around">
+          <div class="progress-bar__box">
+            <div class="progress-bar__check"></div>
+            <p class="progress-bar__text">選擇房間</p>
+            <p class="progress-bar__mark">&check;</p>
+          </div>
+          <div class="progress-bar__box">
+            <div class="progress-bar__check"></div>
+            <p class="progress-bar__text">加購房間</p>
+            <p class="progress-bar__mark">&check;</p>
+          </div>
+          <div class="progress-bar__box">
+            <div class="progress-bar__check"></div>
+            <p class="progress-bar__text">確認付款</p>
+            <p class="progress-bar__mark">&check;</p>
+          </div>
+          <div class="progress-bar__box">
+            <div class="progress-bar__check"></div>
+            <p class="progress-bar__text abosolute-two-word">完成</p>
+            <p class="progress-bar__mark">&check;</p>
+          </div>
+        </div>
+        
+        <div class="progress-bar__line"></div>
+      </div>
+
       <div class="flex-wrapper">
-        <div class="form-menu">
+        <div class="form-menu" action="javascript:void(0)">
           <div class="form-menu__wrapper">
-            <h3 class="form-menu__title">註冊成功!</h3>
-            <p class="form-menu__paragraph">等待跳轉或點選按鈕前往登入頁面</p>
+            <h3 class="form-menu__title">信件已送出</h3>
+            <p class="form-menu__paragraph">
+              等待跳轉或點選按鈕前往首頁
+            </p>
             <!-- 
           <div class="form-menu__input-box">
             <label class="form-menu__label" for="email">電子信箱</label>
@@ -85,7 +115,7 @@
             <!-- <button class="form-menu__submit" type="submit">送出</button> -->
             <a href="../booking/booking.html">
               <div class="form-menu__helper flex-center text-center">
-                <small class="form-menu__submit">前往登入</small>
+                <small class="form-menu__submit">返回登入頁</small>
               </div></a
             >
           </div>
@@ -113,25 +143,6 @@
               <img src="../../NavFooterPic/phone-call.svg" alt="" />
               <p class="hotel-number hotel-info">0570-8754-56</p>
             </div>
-
-            <!-- <ul class="ul-menu">
-                <li class="li-menu"><a href="#">歷史</a></li>
-                <li class="li-menu"><a href="#">佳餚美饌</a></li>
-                <li class="li-menu"><a href="#">房型</a></li>
-                <li class="li-menu"><a href="#">設備</a></li>
-                <li class="li-menu"><a href="#">觀光交通</a></li>
-              </ul>
-              <ul class="ul-menu">
-                <li class="li-menu"><a href="#">繁體中文</a></li>
-                <li class="li-menu"><a href="#">简体中文</a></li>
-                <li class="li-menu"><a href="#">日本語</a></li>
-                <li class="li-menu"><a href="#">English</a></li>
-              </ul>
-              <ul class="ul-menu">
-                <li class="li-menu"><a href="#">常見問題</a></li>
-                <li class="li-menu"><a href="#">電郵詢問</a></li>
-                <li class="li-menu"><a href="#">隱私權政策</a></li>
-              </ul> -->
           </div>
         </div>
       </div>
@@ -139,6 +150,6 @@
     </footer>
 
     <script src="../../js/nav.js"></script>
-    <script src="./sign_up_success.js"></script>
+    <script src="./order.js"></script>
   </body>
 </html>
