@@ -75,7 +75,7 @@
           </div>
           <div class="progress-bar__box">
             <div class="progress-bar__check"></div>
-            <p class="progress-bar__text">加購房間</p>
+            <p class="progress-bar__text">加購餐點</p>
             <p class="progress-bar__mark">&check;</p>
           </div>
           <div class="progress-bar__box">
@@ -98,7 +98,7 @@
         >
           <p class="greeting__hello">張錫津先生您好</p>
           <p class="greeting__logout">
-            <a href="" class="greeting__href">登出</a>
+            <a href="../../index.html" class="greeting__href">登出</a>
           </p>
         </div>
         <div
@@ -258,15 +258,17 @@
             <p class="payment__alter">您也可選用</p>
 
             <div class="payment__credit">
-              <div class="payment__cash-check credit-check">
+              <div
+                class="payment__cash-check credit-check"
+                id="credit-checkbox"
+              >
                 <input
                   type="checkbox"
-                  id="credit-card"
-                  name="credit-card"
+                  id="credit"
+                  name="credit"
                   class="payment__cash-checkbox"
-                  checked
                 />
-                <label for="credit-card" class="payment__cash-label"
+                <label for="credit" class="payment__cash-label"
                   >信用卡付款</label
                 >
               </div>
@@ -308,7 +310,7 @@
                     required="required"
                     name="credit-number"
                     id="credit-number"
-                    placeholder="請輸入卡號"
+                    placeholder="請輸入卡號(16碼)"
                   />
                 </div>
                 <div class="form-menu__input-box flex flex-between w-48">
@@ -321,7 +323,7 @@
                     required="required"
                     name="credit-expired"
                     id="credit-expired"
-                    placeholder="MM/YY"
+                    placeholder="MM/YY(四位數字)"
                   />
                 </div>
                 <div class="form-menu__input-box flex flex-between w-48">
@@ -355,7 +357,7 @@
 
             <div class="button-div">
               <button
-                class="form-menu__submit text-center w-60 block text-500 mt-30"
+                class="form-menu__submit text-center block text-500 mt-30"
                 type="submit"
               >
                 完成訂房
@@ -363,7 +365,7 @@
             </div>
             <div class="button-div">
               <a
-                class="text-center w-60 block return"
+                class="text-center block return"
                 href="javascript: history.go(-1)"
                 >返回前頁</a
               >

@@ -554,6 +554,10 @@ footer .copyright {
   width: 100%;
 }
 
+.w-60 {
+  width: 60%;
+}
+
 .w-50 {
   width: 50%;
 }
@@ -788,13 +792,6 @@ main {
   font-weight: 700;
 }
 
-.room-form .button-div {
-  width: 60%;
-  margin: auto;
-  margin-top: 60px;
-  margin-bottom: 30px;
-}
-
 .greeting {
   margin-bottom: 50px;
 }
@@ -839,12 +836,18 @@ main {
 }
 .room__date-input {
   text-align: center;
+  display: inline-block;
+  background-color: #fff;
   font-size: 1.3rem;
   color: #165e83;
   width: 70%;
   border-radius: 0 10px 10px 0;
   border: 1px solid #00a3af;
   position: relative;
+  padding: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 .room__date-input::-webkit-calendar-picker-indicator {
   position: absolute;

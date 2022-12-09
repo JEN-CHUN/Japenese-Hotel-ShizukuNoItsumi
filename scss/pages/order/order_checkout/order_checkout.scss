@@ -125,8 +125,7 @@
     margin-top: 60px;
   }
 
-
-  &__cash-able{
+  &__cash-able {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -134,7 +133,7 @@
     align-items: center;
     gap: 5px;
     margin-bottom: 30px;
-    img{
+    img {
       width: 80px;
       vertical-align: bottom;
     }
@@ -144,7 +143,7 @@
     font-size: 1.3rem;
   }
 
-  &__credit{
+  &__credit {
     width: 90%;
     margin: auto;
     border: 3.5px solid $secondary-dirt-brown;
@@ -173,26 +172,25 @@
     accent-color: $secondary-dirt-brown;
   }
 
-  &__alter{
+  &__alter {
     color: $main-color;
     font-size: 1.2rem;
     text-align: center;
     margin-bottom: 30px;
   }
 
-  &__input-area{
+  &__input-area {
     width: 90%;
     margin: auto;
   }
-
 }
 
-.button-div{
+.button-div {
   width: 60%;
   margin: auto;
 }
 
-.credit-check{
+.credit-check {
   width: 100%;
   border: 0;
 }
@@ -215,6 +213,17 @@
 
 .last {
   padding-bottom: 60px;
+}
+
+
+
+@media (max-width: 960px) {
+  .payment {
+    &__cash-pic {
+      text-align: center;
+      width: 30%;
+    }
+  }
 }
 
 @media (max-width: 576px) {
@@ -262,28 +271,6 @@
       margin-top: 20px;
     }
   }
-}
-
-@media (max-width: 960px) {
-  .payment{
-    
-    &__cash-pic{
-      text-align: center;
-      width: 30%;
-    }
-  }
-}
-
-@media (max-width: 570px) {
-  .payment{
-    
-    &__cash-pic{
-      text-align: center;
-    }
-  }
-}
-
-@media (max-width: 450px) {
   .payment {
     &__title {
       margin-top: 20px;
@@ -298,10 +285,18 @@
       margin-bottom: 15px;
     }
 
-    &__credit{
-      .form-menu__input-box{
+    &__credit {
+      .form-menu__input-box {
         width: 100%;
       }
+    }
+  }
+}
+
+@media (max-width: 570px) {
+  .payment {
+    &__cash-pic {
+      text-align: center;
     }
   }
 }

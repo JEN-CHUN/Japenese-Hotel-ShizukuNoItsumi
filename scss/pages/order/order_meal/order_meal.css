@@ -1,5 +1,5 @@
 .meal {
-  justify-content: center;
+  justify-content: space-around;
 }
 .meal__title {
   color: #165e83;
@@ -13,11 +13,15 @@
 
 .meal__menu {
   width: 100%;
+  margin: auto;
+}
+.meal__menu__type {
+  width: 250px;
 }
 .meal__menu__img {
-  background-color: antiquewhite;
-  width: 240px;
+  width: 100%;
   height: 300px;
+  background-color: antiquewhite;
 }
 .meal__menu__price {
   background-color: #8c6450;
@@ -45,7 +49,7 @@
 .number-selector__count-group {
   background-color: transparent;
   border: none;
-  border-right: 1px solid #8c6450;
+  width: 100%;
   border-radius: 0px;
 }
 
@@ -69,6 +73,10 @@
     width: 100%;
     margin-bottom: 60px;
   }
+  .meal__menu__type:last-child {
+    width: 100%;
+    margin-bottom: 0px;
+  }
   .meal__menu__img {
     width: 100%;
   }
@@ -89,5 +97,12 @@
     background-color: transparent;
     border: none;
     border-radius: 0px;
+  }
+}
+@media (max-width: 450px) {
+  .button-div .form-menu__submit {
+    width: 70%;
+    margin: auto;
+    margin: 30px auto;
   }
 }/*# sourceMappingURL=order_meal.css.map */

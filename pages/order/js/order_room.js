@@ -16,7 +16,7 @@ let adultNumber = adult.querySelector("#adult-number");
 
 // Children
 let children = document.querySelector("#child-people-number");
-let childrenNumber = adult.querySelector("#child-number");
+let childrenNumber = children.querySelector("#child-number");
 // let childrenNumberMinus = adult.querySelector(".number-selector__count__minus");
 // let childrenNumberPlus = adult.querySelector(".number-selector__count__plus");
 
@@ -41,6 +41,12 @@ let submitBtn = document.querySelector("#submit-button");
 // 入住及退房日期的相關設定
 dateStart.value = date;
 dateEnd.value = date;
+
+// Room Local Value use
+let leaf = document.querySelector("#leaf-number");
+let tree = document.querySelector("#tree-number");
+let branch = document.querySelector("#branch-number");
+let prime = document.querySelector("#prime-number");
 
 //Shows how many people can be contain per room
 let peoplePerRoom = {
@@ -101,6 +107,12 @@ for (let i = 0; i < minusIcon.length; i++) {
     if (NumberIcon[i].value <= 0) {
       NumberIcon[i].value = 0;
     }
+    localStorage.setItem("adult-number", adultNumber.value);
+    localStorage.setItem("child-number", childrenNumber.value);
+    localStorage.setItem("leaf-room-number", leaf.value);
+    localStorage.setItem("tree-room-number", tree.value);
+    localStorage.setItem("branch-room-number", branch.value);
+    localStorage.setItem("prime-room-number", prime.value);
   });
 }
 
@@ -119,6 +131,12 @@ for (let i = 0; i < plusIcon.length; i++) {
         roomNumber[i].value = 5;
       }
     }
+    localStorage.setItem("adult-number", adultNumber.value);
+    localStorage.setItem("child-number", childrenNumber.value);
+    localStorage.setItem("leaf-room-number", leaf.value);
+    localStorage.setItem("tree-room-number", tree.value);
+    localStorage.setItem("branch-room-number", branch.value);
+    localStorage.setItem("prime-room-number", prime.value);
   });
 }
 
@@ -130,31 +148,31 @@ for (let i = 0; i < peopleNumber.length; i++) {
     //   // console.log(123);
     // }
     for (let i = 0; i < peopleNumber.length; i++) {
-      if (peopleNumber[i].value >= 15) {
-        peopleGroup[i].value = 15;
+      if (Number(peopleNumber[i].value) >= 15) {
+        peopleNumber[i].value = "15";
       }
     }
+    localStorage.setItem("adult-number", adultNumber.value);
+    localStorage.setItem("child-number", childrenNumber.value);
   });
 }
 
 // Room Number Limited
 for (let i = 0; i < roomNumber.length; i++) {
-  roomNumber[i].addEventListener("change", (event) => {
+  roomNumber[i].addEventListener("keyup", (event) => {
     if (roomNumber[i].value > 5) {
       roomNumber[i].value = 5;
-      // console.log(123);
     }
+    localStorage.setItem("leaf-room-number", leaf.value);
+    localStorage.setItem("tree-room-number", tree.value);
+    localStorage.setItem("branch-room-number", branch.value);
+    localStorage.setItem("prime-room-number", prime.value);
   });
-
-  // if (roomNumber[i].value > 5) {
-  //   roomNumber[i].value = 5;
-  //   // console.log(123);
-  // }
 }
 
 // Number Limited
 for (let i = 0; i < NumberIcon.length; i++) {
-  NumberIcon[i].addEventListener("change", (event) => {
+  NumberIcon[i].addEventListener("keyup", (event) => {
     if (NumberIcon[i].value < 0) {
       NumberIcon[i].value = 0;
       // console.log(123);
@@ -163,6 +181,7 @@ for (let i = 0; i < NumberIcon.length; i++) {
     if (!Number.isInteger(NumberIcon[i].value)) {
       NumberIcon[i].value = Math.floor(NumberIcon[i].value);
     }
+    
   });
 }
 
@@ -209,3 +228,9 @@ submitBtn.addEventListener("click", (event) => {
     location.href = "./order_meal.html";
   }
 });
+
+// for (var k in peoplePerRoom) {
+//   if (peoplePerRoom.hasOwnProperty(k)) {
+
+//   }
+// }

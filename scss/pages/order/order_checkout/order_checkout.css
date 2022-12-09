@@ -177,6 +177,12 @@
   padding-bottom: 60px;
 }
 
+@media (max-width: 960px) {
+  .payment__cash-pic {
+    text-align: center;
+    width: 30%;
+  }
+}
 @media (max-width: 576px) {
   .section-title {
     padding: 10px 20px;
@@ -213,19 +219,6 @@
   .payment__title {
     margin-top: 20px;
   }
-}
-@media (max-width: 960px) {
-  .payment__cash-pic {
-    text-align: center;
-    width: 30%;
-  }
-}
-@media (max-width: 570px) {
-  .payment__cash-pic {
-    text-align: center;
-  }
-}
-@media (max-width: 450px) {
   .payment__title {
     margin-top: 20px;
   }
@@ -239,5 +232,10 @@
   }
   .payment__credit .form-menu__input-box {
     width: 100%;
+  }
+}
+@media (max-width: 570px) {
+  .payment__cash-pic {
+    text-align: center;
   }
 }/*# sourceMappingURL=order_checkout.css.map */
