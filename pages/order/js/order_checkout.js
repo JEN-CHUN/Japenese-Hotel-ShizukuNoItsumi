@@ -65,7 +65,7 @@ const treeResult = document.querySelector('#tree');
 const branchResult = document.querySelector("#branch");
 const primeResult = document.querySelector('#prime');
 const breakfastResult = document.querySelector('#breakfast');
-const lunchfastResult = document.querySelector('#lunch');
+const lunchResult = document.querySelector('#lunch');
 const dinnerResult = document.querySelector('#dinner');
 const noMealResult = document.querySelector('#meal-none');
 
