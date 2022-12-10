@@ -7,6 +7,13 @@ let breakfast = document.querySelector("#breakfast");
 let lunch = document.querySelector("#lunch");
 let dinner = document.querySelector("#dinner");
 
+let totaLPeopleNum = Number(sessionStorage["adult-number"])+Number(sessionStorage["child-number"])
+
+// Default Meal Number
+sessionStorage.setItem("breakfast", breakfast.value);
+sessionStorage.setItem("lunch", lunch.value);
+sessionStorage.setItem("dinner", dinner.value);
+
 // Minus Button
 for (let i = 0; i < minusIcon.length; i++) {
   minusIcon[i].addEventListener("click", (event) => {
@@ -14,9 +21,9 @@ for (let i = 0; i < minusIcon.length; i++) {
     if (NumberIcon[i].value <= 0) {
       NumberIcon[i].value = 0;
     }
-    localStorage.setItem("breakfast", breakfast.value);
-    localStorage.setItem("lunch", lunch.value);
-    localStorage.setItem("dinner", dinner.value);
+    sessionStorage.setItem("breakfast", breakfast.value);
+    sessionStorage.setItem("lunch", lunch.value);
+    sessionStorage.setItem("dinner", dinner.value);
   });
 }
 
@@ -24,12 +31,12 @@ for (let i = 0; i < minusIcon.length; i++) {
 for (let i = 0; i < plusIcon.length; i++) {
   plusIcon[i].addEventListener("click", (event) => {
     NumberIcon[i].value -= -1;
-    if (NumberIcon[i].value >= 30) {
-      NumberIcon[i].value = 30;
+    if (NumberIcon[i].value >= totaLPeopleNum) {
+      NumberIcon[i].value = totaLPeopleNum;
     }
-    localStorage.setItem("breakfast", breakfast.value);
-    localStorage.setItem("lunch", lunch.value);
-    localStorage.setItem("dinner", dinner.value);
+    sessionStorage.setItem("breakfast", breakfast.value);
+    sessionStorage.setItem("lunch", lunch.value);
+    sessionStorage.setItem("dinner", dinner.value);
   });
 }
 
@@ -40,16 +47,16 @@ for (let i = 0; i < NumberIcon.length; i++) {
       NumberIcon[i].value = 0;
       // console.log(123);
     }
-    if (NumberIcon[i].value > 30) {
-      NumberIcon[i].value = 30;
+    if (NumberIcon[i].value > totaLPeopleNum) {
+      NumberIcon[i].value = totaLPeopleNum;
       // console.log(123);
     }
     if (!Number.isInteger(NumberIcon[i].value)) {
       NumberIcon[i].value = Math.floor(NumberIcon[i].value);
     }
-    localStorage.setItem("breakfast", breakfast.value);
-    localStorage.setItem("lunch", lunch.value);
-    localStorage.setItem("dinner", dinner.value);
+    sessionStorage.setItem("breakfast", breakfast.value);
+    sessionStorage.setItem("lunch", lunch.value);
+    sessionStorage.setItem("dinner", dinner.value);
   });
 }
 

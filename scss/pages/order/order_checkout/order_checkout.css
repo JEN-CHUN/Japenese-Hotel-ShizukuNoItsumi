@@ -223,6 +223,7 @@
     margin-top: 20px;
   }
   .payment__cash-checkbox {
+    text-align: center;
     order: 2;
     width: 100%;
   }

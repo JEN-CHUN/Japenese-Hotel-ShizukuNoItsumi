@@ -170,6 +170,7 @@
     width: 20px;
     height: 20px;
     accent-color: $secondary-dirt-brown;
+    // appearance: none;
   }
 
   &__alter {
@@ -277,6 +278,7 @@
     }
 
     &__cash-checkbox {
+      text-align: center;
       order: 2;
       width: 100%;
     }

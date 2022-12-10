@@ -12,19 +12,71 @@ const cardExpired = document.querySelector("#credit-expired");
 const cardCVV = document.querySelector("#credit-cvv");
 const cardOwner = document.querySelector("#credit-owner");
 
+// Sumbit Btn
+const submitBtn = document.querySelector("#submit-button");
+
 // Price of Rooms and Meal
-let roomPrice = {
-  leaf: 38300,
-  tree: 39300,
-  branch: 41200,
-  prime: 41200,
+const roomPrice = {
+  leaf: 35000,
+  tree: 39000,
+  branch: 42500,
+  prime: 52000,
 };
 
-let mealPrice = {
+const mealPrice = {
   breakfast: 500,
   lunch: 750,
   dinner: 800,
 };
+
+// Session Item
+
+// Date Session Item
+const sessionDateStart = sessionStorage.getItem("date-start");
+const sessionDateEnd = sessionStorage.getItem("date-end");
+
+// People Number
+let adultNumber = sessionStorage.getItem("adult-number");
+let childNumber = sessionStorage.getItem("child-number");
+
+// Rooms Number
+let leafNumber = Number(sessionStorage.getItem("leaf-room-number"));
+let treeNumber = Number(sessionStorage.getItem("tree-room-number"));
+let branchNumber = Number(sessionStorage.getItem("branch--room-number"));
+let primeNumber = Number(sessionStorage.getItem("prime-room-number"));
+
+const roomNumberList = [leafNumber, treeNumber, branchNumber, primeNumber] 
+
+// Meal Number
+let breakfastNumber = Number(sessionStorage.getItem("breakfast"));
+let lunchNumber = Number(sessionStorage.getItem("lunch"));
+let dinnerNumber = Number(sessionStorage.getItem("dinner"));
+
+const mealNumberList = [breakfastNumber, lunchNumber, dinnerNumber] 
+
+// All Dynamic
+const dateStart = document.querySelector('#date-start');
+const dateEnd = document.querySelector('#date-end');
+const totalPriceResult = document.querySelector('#total-price');
+const adultResult = document.querySelector("#adult-number");
+const childResult = document.querySelector('#child-number');
+const leafResult = document.querySelector('#leaf');
+const treeResult = document.querySelector('#tree');
+const branchResult = document.querySelector("#branch");
+const primeResult = document.querySelector('#prime');
+const breakfastResult = document.querySelector('#breakfast');
+const lunchfastResult = document.querySelector('#lunch');
+const dinnerResult = document.querySelector('#dinner');
+const noMealResult = document.querySelector('#meal-none');
+
+// Room Price List
+let roomPriceList = [];
+
+// Meal Price List
+let mealPriceList = [];
+
+// Total Price
+let totalPrice = 0;
 
 // Regexs
 // Regex for only characters
@@ -54,6 +106,8 @@ const creditCheckbox = document.querySelector("#credit");
 
 // Credit Payment Full Div
 const PaymentDiv = document.querySelector(".payment__credit");
+
+
 
 for (let i = 0; i < creditGroupInput.length; i++) {
   creditGroupInput[i].removeAttribute("required");
@@ -221,3 +275,73 @@ creditCheckbox.addEventListener("click", () => {
     }
   }
 });
+
+
+for (let k in roomPrice) {
+  if (roomPrice.hasOwnProperty(k)) {
+    roomPriceList.push(roomPrice[k]);
+  }
+}
+
+for (let k in mealPrice) {
+  if (mealPrice.hasOwnProperty(k)) {
+    mealPriceList.push(mealPrice[k]);
+  }
+}
+
+for (let i = 0; i < roomPriceList.length; i++) {
+  totalPrice += roomPriceList[i]*roomNumberList[i]
+}
+
+for (let i = 0; i < mealPriceList.length; i++) {
+  totalPrice += mealPriceList[i]*mealNumberList[i]
+  
+}
+
+// Show innerHtml
+dateStart.innerHTML = `入住時間：${sessionDateStart}　15:30`;
+dateEnd.innerHTML = `退房時間：${sessionDateEnd}　12:00`;
+
+totalPriceResult.innerHTML = totalPrice
+
+adultResult.innerHTML = `成人 ${adultNumber} 位`;
+childResult.innerHTML = `兒童 ${childNumber} 位`;
+
+// const leafResult = document.querySelector('#leaf');
+// const treeResult = document.querySelector('#tree');
+// const branchResult = document.querySelector("#branch");
+// const primeResult = document.querySelector('#prime');
+
+if (leafNumber != '0') {
+  leafResult.innerHTML = `葉之蔭簡約套房(兩人房)　共 ${leafNumber} 間`;
+  
+}
+
+if (treeNumber != '0') {
+  treeResult.innerHTML = `木之花舒適套房(兩人房)　共 ${treeNumber} 間`;
+  
+}
+if (branchNumber != '0') {
+  branchResult.innerHTML = `梢之景悅享套房(四人房)　共 ${branchNumber} 間`;
+}
+
+if (primeNumber != '0') {
+  primeResult.innerHTML = `常盤木尊貴套房(四人房)　共 ${primeNumber} 間`;
+  
+}
+
+if (breakfastNumber != '0') {
+  breakfastResult.innerHTML = `早餐 ${breakfastNumber} 份`
+}
+
+if (lunchNumber != '0') {
+  lunchResult.innerHTML = `午餐 ${lunchNumber} 份`
+}
+
+if (dinnerNumber != '0') {
+  dinnerResult.innerHTML = `晚餐 ${dinnerNumber} 份`
+}
+
+if (breakfastNumber == 0 && lunchNumber == 0 && dinnerNumber == 0) {
+  noMealResult.innerHTML = `無`
+}

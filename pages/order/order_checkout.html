@@ -98,7 +98,9 @@
         >
           <p class="greeting__hello">張錫津先生您好</p>
           <p class="greeting__logout">
-            <a href="../../index.html" class="greeting__href">登出</a>
+            <a href="../../index.html" class="greeting__href" id="logout-button"
+              >登出</a
+            >
           </p>
         </div>
         <div
@@ -115,11 +117,11 @@
               </div>
               <div class="checkout__list__list-container">
                 <div class="checkout__list__info">
-                  <p class="checkout__list__items">
-                    入住日期：2022/12/12 15:00
+                  <p class="checkout__list__items" id="date-start">
+                    <!-- 入住日期：2022/12/12 15:00 -->
                   </p>
-                  <p class="checkout__list__items">
-                    入住日期：2022/12/12 15:00
+                  <p class="checkout__list__items" id="date-end">
+                    <!-- 入住日期：2022/12/12 15:00 -->
                   </p>
                 </div>
               </div>
@@ -130,7 +132,12 @@
               </div>
               <div class="checkout__list__list-container">
                 <div class="checkout__list__info">
-                  <p class="checkout__list__items">成人 1 位</p>
+                  <p class="checkout__list__items" id="adult-number">
+                    成人 1 位
+                  </p>
+                  <p class="checkout__list__items" id="child-number">
+                    成人 1 位
+                  </p>
                 </div>
               </div>
             </div>
@@ -140,9 +147,10 @@
               </div>
               <div class="checkout__list__list-container">
                 <div class="checkout__list__info">
-                  <p class="checkout__list__items">
-                    葉之蔭簡約套房(兩小床)，共 1 間
-                  </p>
+                  <p class="checkout__list__items" id="leaf"></p>
+                  <p class="checkout__list__items" id="tree"></p>
+                  <p class="checkout__list__items" id="branch"></p>
+                  <p class="checkout__list__items" id="prime"></p>
                 </div>
               </div>
             </div>
@@ -152,8 +160,10 @@
               </div>
               <div class="checkout__list__list-container">
                 <div class="checkout__list__info">
-                  <p class="checkout__list__items">早餐 1 份</p>
-                  <p class="checkout__list__items">午餐 1 份</p>
+                  <p class="checkout__list__items" id="breakfast"></p>
+                  <p class="checkout__list__items" id="lunch"></p>
+                  <p class="checkout__list__items" id="dinner"></p>
+                  <p class="checkout__list__items" id="meal-none"></p>
                 </div>
               </div>
             </div>
@@ -165,7 +175,9 @@
                 class="checkout__list__list-container border-bottom-0 border-0"
               >
                 <div class="checkout__list__info">
-                  <p class="checkout__list__items red">￥39,300</p>
+                  <p class="checkout__list__items red">
+                    ￥<span id="total-price"></span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -225,7 +237,7 @@
               >
               <input
                 class="form-menu__input country"
-                type="tel"
+                type="text"
                 name="country"
                 required="required"
                 id="country"
@@ -233,7 +245,7 @@
               />
               <input
                 class="form-menu__input address"
-                type="tel"
+                type="text"
                 name="address"
                 required="required"
                 id="address"
@@ -306,7 +318,7 @@
                   >
                   <input
                     class="form-menu__input w-100"
-                    type="tel"
+                    type="text"
                     required="required"
                     name="credit-number"
                     id="credit-number"
@@ -319,7 +331,7 @@
                   >
                   <input
                     class="form-menu__input w-100"
-                    type="tel"
+                    type="text"
                     required="required"
                     name="credit-expired"
                     id="credit-expired"
@@ -332,7 +344,7 @@
                   >
                   <input
                     class="form-menu__input w-100"
-                    type="tel"
+                    type="text"
                     required="required"
                     name="credit-cvv"
                     id="credit-cvv"
@@ -345,7 +357,7 @@
                   >
                   <input
                     class="form-menu__input w-100"
-                    type="tel"
+                    type="text"
                     required="required"
                     name="credit-owner"
                     id="credit-owner"
@@ -359,6 +371,7 @@
               <button
                 class="form-menu__submit text-center block text-500 mt-30"
                 type="submit"
+                id="submit-button"
               >
                 完成訂房
               </button>
@@ -403,5 +416,6 @@
 
     <script src="../../js/nav.js"></script>
     <script src="./js/order_checkout.js"></script>
+    <script src="./order.js"></script>
   </body>
 </html>

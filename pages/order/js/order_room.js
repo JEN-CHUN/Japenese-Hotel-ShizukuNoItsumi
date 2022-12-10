@@ -56,6 +56,20 @@ let peoplePerRoom = {
   prime: 4,
 };
 
+// Default Date (Today)
+sessionStorage.setItem("date-start", dateStart.value);
+sessionStorage.setItem("date-end", dateEnd.value);
+
+// Default Poeple Number
+sessionStorage.setItem("adult-number", adultNumber.value);
+sessionStorage.setItem("child-number", childrenNumber.value);
+
+// Default Room Number
+sessionStorage.setItem("leaf-room-number", leaf.value);
+sessionStorage.setItem("tree-room-number", tree.value);
+sessionStorage.setItem("branch-room-number", branch.value);
+sessionStorage.setItem("prime-room-number", prime.value);
+
 dateStart.addEventListener("change", (event) => {
   let dateChange = Date.parse(dateStart.value);
   let dateRecent = Date.parse(date);
@@ -74,6 +88,9 @@ dateStart.addEventListener("change", (event) => {
   if (dateMax < dateMin) {
     dateEnd.value = dateStart.value;
   }
+  sessionStorage.setItem("date-start", dateStart.value);
+  sessionStorage.setItem("date-end", dateEnd.value);
+  
 });
 
 dateEnd.addEventListener("change", (event) => {
@@ -82,6 +99,7 @@ dateEnd.addEventListener("change", (event) => {
   if (dateChange <= dateMin) {
     dateEnd.value = dateStart.value;
   }
+  sessionStorage.setItem("date-end", dateEnd.value);
 });
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -107,12 +125,12 @@ for (let i = 0; i < minusIcon.length; i++) {
     if (NumberIcon[i].value <= 0) {
       NumberIcon[i].value = 0;
     }
-    localStorage.setItem("adult-number", adultNumber.value);
-    localStorage.setItem("child-number", childrenNumber.value);
-    localStorage.setItem("leaf-room-number", leaf.value);
-    localStorage.setItem("tree-room-number", tree.value);
-    localStorage.setItem("branch-room-number", branch.value);
-    localStorage.setItem("prime-room-number", prime.value);
+    sessionStorage.setItem("adult-number", adultNumber.value);
+    sessionStorage.setItem("child-number", childrenNumber.value);
+    sessionStorage.setItem("leaf-room-number", leaf.value);
+    sessionStorage.setItem("tree-room-number", tree.value);
+    sessionStorage.setItem("branch-room-number", branch.value);
+    sessionStorage.setItem("prime-room-number", prime.value);
   });
 }
 
@@ -131,12 +149,12 @@ for (let i = 0; i < plusIcon.length; i++) {
         roomNumber[i].value = 5;
       }
     }
-    localStorage.setItem("adult-number", adultNumber.value);
-    localStorage.setItem("child-number", childrenNumber.value);
-    localStorage.setItem("leaf-room-number", leaf.value);
-    localStorage.setItem("tree-room-number", tree.value);
-    localStorage.setItem("branch-room-number", branch.value);
-    localStorage.setItem("prime-room-number", prime.value);
+    sessionStorage.setItem("adult-number", adultNumber.value);
+    sessionStorage.setItem("child-number", childrenNumber.value);
+    sessionStorage.setItem("leaf-room-number", leaf.value);
+    sessionStorage.setItem("tree-room-number", tree.value);
+    sessionStorage.setItem("branch-room-number", branch.value);
+    sessionStorage.setItem("prime-room-number", prime.value);
   });
 }
 
@@ -152,8 +170,8 @@ for (let i = 0; i < peopleNumber.length; i++) {
         peopleNumber[i].value = "15";
       }
     }
-    localStorage.setItem("adult-number", adultNumber.value);
-    localStorage.setItem("child-number", childrenNumber.value);
+    sessionStorage.setItem("adult-number", adultNumber.value);
+    sessionStorage.setItem("child-number", childrenNumber.value);
   });
 }
 
@@ -163,10 +181,10 @@ for (let i = 0; i < roomNumber.length; i++) {
     if (roomNumber[i].value > 5) {
       roomNumber[i].value = 5;
     }
-    localStorage.setItem("leaf-room-number", leaf.value);
-    localStorage.setItem("tree-room-number", tree.value);
-    localStorage.setItem("branch-room-number", branch.value);
-    localStorage.setItem("prime-room-number", prime.value);
+    sessionStorage.setItem("leaf-room-number", leaf.value);
+    sessionStorage.setItem("tree-room-number", tree.value);
+    sessionStorage.setItem("branch-room-number", branch.value);
+    sessionStorage.setItem("prime-room-number", prime.value);
   });
 }
 
@@ -181,7 +199,6 @@ for (let i = 0; i < NumberIcon.length; i++) {
     if (!Number.isInteger(NumberIcon[i].value)) {
       NumberIcon[i].value = Math.floor(NumberIcon[i].value);
     }
-    
   });
 }
 
