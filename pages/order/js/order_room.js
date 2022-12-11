@@ -78,7 +78,7 @@ if (sessionStorage.getItem("date-end") == null) {
 if (sessionStorage.getItem("adult-number") == null) {
   sessionStorage.setItem("adult-number", adultNumber.value);
 }
-if (sessionStorage.getItem("child-numbe") == null) {
+if (sessionStorage.getItem("child-number") == null) {
   sessionStorage.setItem("child-number", childrenNumber.value);
 }
 
