@@ -4,8 +4,15 @@ let date = new Date().toLocaleDateString("en-CA", {
   day: "2-digit",
 });
 
+// Setting for dates
 let dateStart = document.querySelector("#date-start");
 let dateEnd = document.querySelector("#date-end");
+let dateMin;
+let dateMax;
+// Count for one day
+const oneDay = 24*60*60*1000;
+
+let totalDay;
 
 // 人頭數量的變數
 // Adults
@@ -38,10 +45,6 @@ let roomNumber = roomGroup.querySelectorAll(".number-selector__count__number");
 // Submit Button
 let submitBtn = document.querySelector("#submit-button");
 
-// 入住及退房日期的相關設定
-dateStart.value = date;
-dateEnd.value = date;
-
 // Room Local Value use
 let leaf = document.querySelector("#leaf-number");
 let tree = document.querySelector("#tree-number");
@@ -55,6 +58,13 @@ let peoplePerRoom = {
   branch: 4,
   prime: 4,
 };
+
+// 入住及退房日期的相關設定
+dateStart.value = date;
+dateEnd.value = date;
+dateMin = Date.parse(dateStart.value);
+dateMax = Date.parse(dateEnd.value);
+
 
 // Default Date (Today)
 if (sessionStorage.getItem("date-start") == null) {
@@ -96,16 +106,12 @@ dateStart.addEventListener("change", (event) => {
 });
 
 dateStart.addEventListener("change", (event) => {
-  //入住日期
-  let dateMin = Date.parse(dateStart.value);
-  // 退房日期
-  let dateMax = Date.parse(dateEnd.value);
+
 
   if (dateMax < dateMin) {
     dateEnd.value = dateStart.value;
   }
-  sessionStorage.setItem("date-start", dateStart.value);
-  sessionStorage.setItem("date-end", dateEnd.value);
+
 });
 
 dateEnd.addEventListener("change", (event) => {
@@ -114,7 +120,7 @@ dateEnd.addEventListener("change", (event) => {
   if (dateChange <= dateMin) {
     dateEnd.value = dateStart.value;
   }
-  sessionStorage.setItem("date-end", dateEnd.value);
+
 });
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -243,8 +249,16 @@ submitBtn.addEventListener("click", (event) => {
     // console.log(peopleAllow);
   }
 
-  // console.log(poepleTotal);
-  // console.log(peopleAllow);
+
+  sessionStorage.setItem("date-start", dateStart.value);
+  sessionStorage.setItem("date-end", dateEnd.value);
+  dateMin = Date.parse(dateStart.value);
+  dateMax = Date.parse(dateEnd.value);
+
+  totalDay = ((dateMax - dateMin) / oneDay) + 1
+  
+  sessionStorage.setItem('total-day', totalDay)
+  
 
   if (peopleAllow == 0 && poepleTotal == 0) {
     alert("請選擇人數與房型");
