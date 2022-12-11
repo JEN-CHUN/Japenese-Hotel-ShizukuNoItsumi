@@ -630,6 +630,18 @@ main{
   }
 }
 
+@media (max-width: 425px) {
+    .open-time{
+      &__text{
+        .text-info{
+          .text-info-time{
+            font-size: 17px;
+          }
+        }
+      }
+    }
+}
+
 @media (max-width: 420px) {
   .welcome {
     &__title {

@@ -1307,6 +1307,11 @@ main .foodBG4 img {
     height: 300px;
   }
 }
+@media (max-width: 425px) {
+  .open-time__text .text-info .text-info-time {
+    font-size: 17px;
+  }
+}
 @media (max-width: 420px) {
   .welcome__title {
     left: 0%;
