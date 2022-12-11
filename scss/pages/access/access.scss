@@ -7,14 +7,48 @@
 // Welcome Picture
 
 .welcome:before {
-  @include welcome-setting("../../../pages/access/pic/welcome.jpg", 0.7);
-  background-position: 50% 80%;
+  @include welcome-setting("../../../pages/access/pic/welcome.jpg", 0.8);
 }
 
 .welcome {
   &__title {
     color: $white;
     @include welcome-title-position(40%, 70%);
+  }
+}
+
+main {
+  position: relative;
+
+  .acBG img {
+    position: absolute;
+    width: 600px;
+    height: auto;
+    top: 15%;
+    right: -15%;
+    opacity: 40%;
+    z-index: -1;
+    transform: scaleX(-1);
+  }
+
+  .acBG2 img {
+    position: absolute;
+    width: 600px;
+    height: auto;
+    top: 55%;
+    right: 70%;
+    opacity: 40%;
+    z-index: -1;
+  }
+  .acBG3 img {
+    position: absolute;
+    width: 600px;
+    height: auto;
+    top: 75%;
+    right: -15%;
+    opacity: 40%;
+    z-index: -1;
+    transform: scaleX(-1);
   }
 }
 
@@ -29,6 +63,7 @@
   height: 500px;
   margin-bottom: 120px;
   gap: 20px;
+
   .access-img {
     width: calc(30% - 10px);
     background-color: aqua;
@@ -45,16 +80,18 @@
 
   .access-detail {
     width: 100%;
+    margin-left: 10px;
+
     &__title {
       color: $main-color;
-      font-size: 50px;
+      font-size: 40px;
       padding: 5px;
       margin-bottom: 30px;
     }
 
-    // &__paragraph {
-    //   margin-bottom: 100px;
-    // }
+    &__paragraph {
+      line-height: 40px;
+    }
   }
 
   // 旅館資訊 使用Flex 至於最下方
@@ -76,9 +113,11 @@
       display: inline-block;
       padding-left: 8px;
       padding-bottom: 15px;
+
       img {
         width: 0.8rem;
       }
+
       p {
         display: inline-block;
       }
@@ -95,6 +134,7 @@
 .location {
   width: 80%;
   margin: auto;
+
   &__title {
     color: $main-color;
     text-align: center;
@@ -102,9 +142,11 @@
     padding: 5px;
     margin-bottom: 30px;
   }
+
   &__pic {
     width: 100%;
     height: auto;
+
     img {
       width: 100%;
       // height: 500px;
@@ -127,7 +169,7 @@
   width: 80%;
   height: 100%;
   margin: auto;
-  margin-bottom: 120px;
+  margin-bottom: 60px;
 
   .scroll-group {
     display: flex;
@@ -141,14 +183,24 @@
       width: 33%;
       color: $white;
       text-align: center;
-      background-color: $main-color;
+      line-height: 69px;
+      font-size: 20px;
+      background: linear-gradient($secondary-dark-blue -50%, $main-color 90%);
 
       a {
         display: inline-block;
         color: $white;
         width: 100%;
-        padding: 20px;
+        height: 69px;
       }
+    }
+
+    li:first-child {
+      border-radius: 10px 0 0 10px;
+    }
+
+    li:last-child {
+      border-radius: 0 10px 10px 0;
     }
   }
 }
@@ -157,8 +209,27 @@
   width: 80%;
   margin: auto;
   margin-bottom: 60px;
+
   img {
     width: 100%;
+  }
+}
+
+.car-route {
+  img:not([src]) {
+    content: url(../../../pages/access/pic/car.svg);
+  }
+}
+
+.train-route {
+  img:not([src]) {
+    content: url(../../../pages/access/pic/train.svg);
+  }
+}
+
+.bus-route {
+  img:not([src]) {
+    content: url(../../../pages/access/pic/bus.svg);
   }
 }
 
@@ -193,6 +264,7 @@
   &__img {
     width: 100%;
     margin-bottom: 50px;
+
     img {
       width: 100%;
     }
@@ -205,14 +277,18 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0px;
+
   .route-info {
     text-align: center;
     width: 49.3%;
     background-color: $secondary-white-blue;
+    border-radius: 10px;
+
     &__title {
       font-size: 18px;
       padding-top: 32px;
     }
+
     &__line::after {
       content: "";
       background-color: $main-color;
@@ -223,6 +299,7 @@
       display: block;
       width: 70%;
     }
+
     &__date {
       width: 70%;
       margin: auto;
@@ -247,16 +324,19 @@
   text-align: center;
   padding: 20px;
   margin-bottom: 120px;
+  border-radius: 10px;
 }
 
 .sight {
   width: 85%;
   margin: auto;
+
   &__title {
-    font-size: 32px;
+    font-size: 30px;
     text-align: center;
     color: $main-color;
   }
+
   &__line::after {
     content: "";
     border: 1.5px solid $main-color;
@@ -270,6 +350,7 @@
 
   &__card-group {
     min-height: 100px;
+    height: 100%;
     // background-color: antiquewhite;
     display: flex;
     flex-wrap: wrap;
@@ -280,26 +361,67 @@
 .card-group {
   width: 26%;
   text-align: center;
-  // background-color: aquamarine;
   margin-bottom: 60px;
-  &__img {
-    background-color: rgb(42, 131, 24);
+
+  .card-group__img1,
+  .card-group__img2,
+  .card-group__img3,
+  .card-group__img4,
+  .card-group__img5,
+  .card-group__img6 {
     width: 100%;
     height: 330px;
-    img {
-      width: 100%;
-      height: 100%;
-    }
+    border-radius: 10px;
   }
-  &__name {
+
+  .card-group__img1 {
+    background: url(../../../pages/access/pic/sight1.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .card-group__img2 {
+    background: url(../../../pages/access/pic/sight2.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .card-group__img3 {
+    background: url(../../../pages/access/pic/sight3.jpg);
+    background-size: cover;
+    background-position: center bottom;
+  }
+
+  .card-group__img4 {
+    background: url(../../../pages/access/pic/sight4.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .card-group__img5 {
+    background: url(../../../pages/access/pic/sight5.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .card-group__img6 {
+    background: url(../../../pages/access/pic/sight6.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__name h3 {
     color: $main-color;
-    font-size: 20px;
-    margin: 10px;
+    font-size: 24px;
+    margin: 15px 0;
   }
 
   &__detail {
     text-align: left;
     margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 30px;
+    min-height: 150px;
   }
 
   &__time {
@@ -307,6 +429,14 @@
     padding: 5px 0;
     border-top: 1px solid $main-color;
     border-bottom: 1px solid $main-color;
+  }
+}
+
+@media (max-width: 848px) {
+  .card-group{
+    &__detail{
+      min-height: 180px;
+    }
   }
 }
 
@@ -321,12 +451,30 @@
 }
 
 @media (max-width: 1500px) {
+  main {
+    .acBG2 img {
+      top: 45%;
+    }
+    .acBG3 img {
+      top: 68%;
+    }
+  }
+
   .card-group {
     width: 40%;
   }
 }
 
 @media (max-width: 1280px) {
+  main {
+    .acBG img {
+      right: -30%;
+    }
+    .acBG3 img {
+      top: 65%;
+    }
+  }
+
   .welcome {
     &__title {
       font-size: 1.8rem;
@@ -336,6 +484,16 @@
 }
 
 @media (max-width: 998px) {
+  main {
+    .acBG img {
+      top: 20%;
+    }
+    .acBG3 img {
+      top: 70%;
+      right: -30%;
+    }
+  }
+
   .welcome {
     &__title {
       font-size: 1.8rem;
@@ -345,12 +503,15 @@
 
   .access-detail-group {
     height: auto;
+
     .access-img {
       width: 100%;
       height: 350px;
     }
+
     .access-text {
       width: 100%;
+
       .access-detail {
         margin-bottom: 30px;
       }
@@ -365,6 +526,7 @@
         width: 100%;
         margin: 15px;
       }
+
       .rate {
         width: 100%;
       }
@@ -380,8 +542,16 @@
   }
 
   .card-group {
-    &__img {
+
+    .card-group__img1,
+    .card-group__img2,
+    .card-group__img3,
+    .card-group__img4,
+    .card-group__img5,
+    .card-group__img6 {
+      width: 100%;
       height: 250px;
+      border-radius: 10px;
     }
   }
 
@@ -389,6 +559,21 @@
 }
 
 @media (max-width: 840px) {
+  main {
+    .acBG img {
+      top: 14%;
+      right: -40%;
+      width: 500px;
+    }
+
+    .acBG2 img {
+      top: 60%;
+    }
+    .acBG3 img {
+      top: 78%;
+    }
+  }
+
   .welcome {
     &__title {
       font-size: 1.8rem;
@@ -396,11 +581,43 @@
     }
   }
 
+  .car-route {
+    img:not([src]) {
+      content: url(../../../pages/access/pic/car2.svg);
+    }
+  }
+
+  .train-route {
+    img:not([src]) {
+      content: url(../../../pages/access/pic/train2.svg);
+    }
+  }
+
+  .bus-route {
+    img:not([src]) {
+      content: url(../../../pages/access/pic/bus2.svg);
+    }
+  }
+
   .route-scroll {
     .scroll-group {
       li {
         width: 100%;
-        margin-bottom: 5px;
+        margin-bottom: 8px;
+        border-radius: 10px;
+        line-height: 60px;
+
+        a {
+          height: 60px;
+        }
+      }
+
+      li:first-child {
+        border-radius: 10px;
+      }
+
+      li:last-child {
+        border-radius: 10px;
       }
     }
   }
@@ -413,19 +630,54 @@
 }
 
 @media (max-width: 780px) {
+  main {
+    .acBG2 img {
+      top: 50%;
+    }
+    .acBG3 img {
+      top: 66%;
+      right: -40%;
+    }
+  }
   .card-group {
     width: 80%;
-    &__img {
-      height: 320px;
+    height: 100%;
+    &__detail{
+      min-height: 100%;
     }
   }
 }
 
 @media (max-width: 575px) {
+  main {
+    .acBG img {
+      top: 14%;
+      right: -60%;
+      width: 500px;
+    }
+    .acBG2 img {
+      top: 43%;
+    }
+    .acBG3 img {
+      top: 61%;
+      right: -90%;
+    }
+  }
+
   .welcome {
     &__title {
       font-size: 1.8rem;
       @include welcome-title-position(20%, 70%);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  main {
+    .acBG img {
+      top: 15%;
+      right: -60%;
+      width: 400px;
     }
   }
 }
@@ -460,8 +712,5 @@
 @media (max-width: 361px) {
   .card-group {
     width: 95%;
-    &__img {
-      height: 200px;
-    }
   }
 }

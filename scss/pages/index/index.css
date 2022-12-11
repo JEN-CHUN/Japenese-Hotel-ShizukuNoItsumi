@@ -226,12 +226,13 @@ footer .copyright {
 .foreword {
   width: 80%;
   margin: auto;
-  margin-top: 56px;
-  margin-bottom: 72px;
+  margin-top: 80px;
+  margin-bottom: 92px;
   text-align: center;
 }
 .foreword__paragraph {
   margin-top: 20px;
+  font-size: 18px;
 }
 .foreword__paragraph:last-of-type {
   margin-bottom: 28px;
@@ -260,9 +261,9 @@ footer .copyright {
 .triangle-up {
   width: 0;
   height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-bottom: 30px solid #555;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-bottom: 22px solid #165e83;
 }
 
 .text-white {
@@ -592,13 +593,13 @@ footer .copyright {
   width: 85%;
   display: flex;
   align-items: center;
-  height: 160px;
+  height: 90px;
   margin: auto;
   margin-bottom: 120px;
 }
 .scroll-section ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   text-align: center;
   width: 100%;
@@ -612,8 +613,8 @@ footer .copyright {
   width: 80%;
   gap: 10px;
   padding: 8px 0;
-  border-radius: 10px;
-  background-color: #165e83;
+  border-radius: 50px;
+  background: linear-gradient(#00a3af -40%, #165e83 100%);
 }
 
 .form-menu-pt {
@@ -622,7 +623,6 @@ footer .copyright {
 
 .form-menu {
   width: 500px;
-  height: 100%;
   background-color: #fff;
   box-shadow: 1px 1px 8px 1px #83ccd2;
   border-radius: 10px;
@@ -809,12 +809,54 @@ footer .copyright {
 .welcome:before {
   content: "";
   background: linear-gradient(transparent 70%, #fff), url("../../../pages/index/pic/welcome.jpg") no-repeat center center/cover;
-  opacity: 0.9;
+  opacity: 0.75;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   position: absolute;
+  z-index: -1;
+}
+
+main {
+  position: relative;
+}
+main .indexBG img {
+  position: absolute;
+  width: 70%;
+  height: auto;
+  top: 10%;
+  right: 60%;
+  opacity: 10%;
+  z-index: -1;
+}
+main .indexBG2 img {
+  position: absolute;
+  width: 80%;
+  height: auto;
+  top: 50%;
+  right: -30%;
+  opacity: 10%;
+  z-index: -1;
+  transform: scaleX(-1);
+}
+main .indexBG3 img {
+  position: absolute;
+  width: 714px;
+  height: auto;
+  top: 40%;
+  right: -20%;
+  opacity: 60%;
+  z-index: -1;
+  transform: scaleX(-1);
+}
+main .indexBG4 img {
+  position: absolute;
+  width: 714px;
+  height: auto;
+  top: 87%;
+  right: 80%;
+  opacity: 60%;
   z-index: -1;
 }
 
@@ -825,7 +867,7 @@ footer .copyright {
 .intro__title {
   color: #165e83;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 24px;
   margin-bottom: 36px;
   letter-spacing: 32px;
   text-indent: 32px;
@@ -841,17 +883,26 @@ footer .copyright {
   flex-wrap: wrap;
 }
 .intro .intro-section__picture {
+  margin-top: 60px;
   width: 50%;
   height: 400px;
 }
 .intro .intro-section__text-intro {
+  margin-top: 60px;
   width: 50%;
   height: 400px;
-  font-size: 1.1rem;
   line-height: 2rem;
+}
+.intro .intro-section__text-intro h3 {
+  text-align: center;
+  font-weight: normal;
+  font-size: 20px;
+  margin-top: 20px;
 }
 .intro .intro-section__text-intro p {
   margin: 48px 90px;
+  text-align: center;
+  font-size: 18px;
 }
 .intro .intro-section__text-intro p:first-child {
   margin-top: 60px;
@@ -889,6 +940,7 @@ footer .copyright {
 }
 
 .marquee-area {
+  margin-top: 70px;
   width: 200%;
   display: flex;
   overflow-x: hidden;
@@ -928,8 +980,14 @@ footer .copyright {
   height: auto;
   text-align: center;
 }
+.marquee-section .marquee-intro h3 {
+  margin-top: 70px;
+  font-weight: normal;
+  font-size: 20px;
+}
 .marquee-section .marquee-intro p {
-  margin: 48px 90px;
+  margin: 30px 90px;
+  font-size: 18px;
 }
 .marquee-section .marquee-intro p:first-child {
   margin-top: 60px;
@@ -1018,11 +1076,28 @@ footer .copyright {
     transform: translateX(calc(-100% - 30px));
   }
 }
+@media (max-width: 1400px) {
+  main .indexBG3 img {
+    top: 37%;
+    right: -30%;
+  }
+  .intro__title {
+    margin-bottom: 0;
+  }
+  .intro .intro-section__text-intro p {
+    margin: 30px 60px;
+  }
+}
+.outdoor-margin-adjust {
+  margin-bottom: 36px;
+}
+
 @media (min-width: 1070px) {
   .welcome__title {
     font-size: 2rem;
     left: -30%;
     top: 30%;
+    letter-spacing: 2px;
   }
   .welcome__title br {
     display: none;
@@ -1034,6 +1109,7 @@ footer .copyright {
     text-align: left;
     left: 5%;
     top: 30%;
+    letter-spacing: 2px;
   }
   .welcome__title br {
     display: none;
@@ -1045,6 +1121,7 @@ footer .copyright {
     text-align: left;
     left: 8%;
     top: 30%;
+    letter-spacing: 2px;
   }
 }
 @media (min-width: 993px) {
@@ -1064,8 +1141,20 @@ footer .copyright {
   }
 }
 @media (max-width: 992px) {
+  main .indexBG3 img {
+    top: 38%;
+    right: -50%;
+    width: 80%;
+  }
+  main .indexBG4 img {
+    top: 85%;
+    width: 80%;
+  }
   .intro .intro-section {
     width: 90%;
+  }
+  .intro .intro-section h3 {
+    margin-top: 40px;
   }
   .intro .intro-section p {
     margin: 30px 56px;
@@ -1074,11 +1163,12 @@ footer .copyright {
     width: 100%;
   }
   .intro .intro-section__text-intro {
+    margin-top: 0;
     width: 100%;
     height: 100%;
   }
   .intro .intro-section .button-div .page-button {
-    margin-top: 28px;
+    margin-top: 20px;
   }
   .marquee-area .marquee-round {
     gap: 0;
@@ -1137,6 +1227,7 @@ footer .copyright {
     text-align: left;
     left: 8%;
     top: 30%;
+    letter-spacing: 2px;
   }
 }
 @media (max-width: 780px) {
@@ -1197,9 +1288,27 @@ footer .copyright {
   }
 }
 @media (max-width: 576px) {
+  main .indexBG3 {
+    width: 70%;
+    right: -50%;
+  }
+  main .indexBG4 img {
+    top: 85%;
+    width: 70%;
+  }
+  .intro__title {
+    margin-bottom: 36px;
+  }
   .intro .intro-section {
     width: 100%;
     height: 100%;
+  }
+  .intro .intro-section h3 {
+    margin-top: 0;
+  }
+  .intro .intro-section .intro-section__picture {
+    height: 300px;
+    margin-top: 0;
   }
   .intro .intro-section .intro-section__picture__picture-one {
     display: none;
@@ -1208,12 +1317,13 @@ footer .copyright {
     position: relative;
     margin: auto;
     width: 85%;
-    height: 100%;
+    height: 90%;
   }
   .welcome__title {
     font-size: 1.2rem;
     text-align: left;
     left: 8%;
     top: 15%;
+    letter-spacing: 2px;
   }
 }/*# sourceMappingURL=index.css.map */

@@ -57,18 +57,34 @@ let peoplePerRoom = {
 };
 
 // Default Date (Today)
-sessionStorage.setItem("date-start", dateStart.value);
-sessionStorage.setItem("date-end", dateEnd.value);
+if (sessionStorage.getItem("date-start") == null) {
+  sessionStorage.setItem("date-start", dateStart.value);
+}
+if (sessionStorage.getItem("date-end") == null) {
+  sessionStorage.setItem("date-end", dateEnd.value);
+}
 
 // Default Poeple Number
-sessionStorage.setItem("adult-number", adultNumber.value);
-sessionStorage.setItem("child-number", childrenNumber.value);
+if (sessionStorage.getItem("adult-number") == null) {
+  sessionStorage.setItem("adult-number", adultNumber.value);
+}
+if (sessionStorage.getItem("child-numbe") == null) {
+  sessionStorage.setItem("child-number", childrenNumber.value);
+}
 
 // Default Room Number
-sessionStorage.setItem("leaf-room-number", leaf.value);
-sessionStorage.setItem("tree-room-number", tree.value);
-sessionStorage.setItem("branch-room-number", branch.value);
-sessionStorage.setItem("prime-room-number", prime.value);
+if (sessionStorage.getItem("leaf-room-number") == null) {
+  sessionStorage.setItem("leaf-room-number", leaf.value);
+}
+if (sessionStorage.getItem("tree-room-number") == null) {
+  sessionStorage.setItem("tree-room-number", tree.value);
+}
+if (sessionStorage.getItem("branch-room-number") == null) {
+  sessionStorage.setItem("branch-room-number", branch.value);
+}
+if (sessionStorage.getItem("prime-room-number") == null) {
+  sessionStorage.setItem("prime-room-number", prime.value);
+}
 
 dateStart.addEventListener("change", (event) => {
   let dateChange = Date.parse(dateStart.value);
@@ -90,7 +106,6 @@ dateStart.addEventListener("change", (event) => {
   }
   sessionStorage.setItem("date-start", dateStart.value);
   sessionStorage.setItem("date-end", dateEnd.value);
-  
 });
 
 dateEnd.addEventListener("change", (event) => {

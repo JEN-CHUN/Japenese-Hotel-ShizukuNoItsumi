@@ -226,12 +226,13 @@ footer .copyright {
 .foreword {
   width: 80%;
   margin: auto;
-  margin-top: 56px;
-  margin-bottom: 72px;
+  margin-top: 80px;
+  margin-bottom: 92px;
   text-align: center;
 }
 .foreword__paragraph {
   margin-top: 20px;
+  font-size: 18px;
 }
 .foreword__paragraph:last-of-type {
   margin-bottom: 28px;
@@ -260,9 +261,9 @@ footer .copyright {
 .triangle-up {
   width: 0;
   height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-bottom: 30px solid #555;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-bottom: 22px solid #165e83;
 }
 
 .text-white {
@@ -592,13 +593,13 @@ footer .copyright {
   width: 85%;
   display: flex;
   align-items: center;
-  height: 160px;
+  height: 90px;
   margin: auto;
   margin-bottom: 120px;
 }
 .scroll-section ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   text-align: center;
   width: 100%;
@@ -612,8 +613,8 @@ footer .copyright {
   width: 80%;
   gap: 10px;
   padding: 8px 0;
-  border-radius: 10px;
-  background-color: #165e83;
+  border-radius: 50px;
+  background: linear-gradient(#00a3af -40%, #165e83 100%);
 }
 
 .form-menu-pt {
@@ -622,7 +623,6 @@ footer .copyright {
 
 .form-menu {
   width: 500px;
-  height: 100%;
   background-color: #fff;
   box-shadow: 1px 1px 8px 1px #83ccd2;
   border-radius: 10px;
@@ -850,6 +850,7 @@ footer .copyright {
 }
 .intro .intro-section__text-intro p {
   margin: 48px 90px;
+  text-align: center;
 }
 .intro .intro-section__text-intro p:first-child {
   margin-top: 60px;
@@ -1018,6 +1019,7 @@ footer .copyright {
     font-size: 2rem;
     left: -30%;
     top: 30%;
+    letter-spacing: 2px;
   }
   .welcome__title br {
     display: none;
@@ -1029,6 +1031,7 @@ footer .copyright {
     text-align: left;
     left: 5%;
     top: 30%;
+    letter-spacing: 2px;
   }
   .welcome__title br {
     display: none;
@@ -1040,6 +1043,7 @@ footer .copyright {
     text-align: left;
     left: 8%;
     top: 30%;
+    letter-spacing: 2px;
   }
 }
 @media (min-width: 993px) {
@@ -1127,6 +1131,7 @@ footer .copyright {
     text-align: left;
     left: 8%;
     top: 30%;
+    letter-spacing: 2px;
   }
 }
 @media (max-width: 780px) {
@@ -1205,5 +1210,6 @@ footer .copyright {
     text-align: left;
     left: 8%;
     top: 15%;
+    letter-spacing: 2px;
   }
 }/*# sourceMappingURL=index.css.map */

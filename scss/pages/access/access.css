@@ -243,13 +243,13 @@ footer .copyright {
   width: 85%;
   display: flex;
   align-items: center;
-  height: 160px;
+  height: 90px;
   margin: auto;
   margin-bottom: 120px;
 }
 .scroll-section ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   text-align: center;
   width: 100%;
@@ -263,8 +263,8 @@ footer .copyright {
   width: 80%;
   gap: 10px;
   padding: 8px 0;
-  border-radius: 10px;
-  background-color: #165e83;
+  border-radius: 50px;
+  background: linear-gradient(#00a3af -40%, #165e83 100%);
 }
 
 .form-menu-pt {
@@ -273,7 +273,6 @@ footer .copyright {
 
 .form-menu {
   width: 500px;
-  height: 100%;
   background-color: #fff;
   box-shadow: 1px 1px 8px 1px #83ccd2;
   border-radius: 10px;
@@ -410,12 +409,13 @@ footer .copyright {
 .foreword {
   width: 80%;
   margin: auto;
-  margin-top: 56px;
-  margin-bottom: 72px;
+  margin-top: 80px;
+  margin-bottom: 92px;
   text-align: center;
 }
 .foreword__paragraph {
   margin-top: 20px;
+  font-size: 18px;
 }
 .foreword__paragraph:last-of-type {
   margin-bottom: 28px;
@@ -444,9 +444,9 @@ footer .copyright {
 .triangle-up {
   width: 0;
   height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-bottom: 30px solid #555;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-bottom: 22px solid #165e83;
 }
 
 .text-white {
@@ -708,20 +708,53 @@ footer .copyright {
 .welcome:before {
   content: "";
   background: linear-gradient(transparent 70%, #fff), url("../../../pages/access/pic/welcome.jpg") no-repeat center center/cover;
-  opacity: 0.7;
+  opacity: 0.8;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   position: absolute;
   z-index: -1;
-  background-position: 50% 80%;
 }
 
 .welcome__title {
   color: #fff;
   left: 40%;
   top: 70%;
+  letter-spacing: 2px;
+}
+
+main {
+  position: relative;
+}
+main .acBG img {
+  position: absolute;
+  width: 600px;
+  height: auto;
+  top: 15%;
+  right: -15%;
+  opacity: 40%;
+  z-index: -1;
+  transform: scaleX(-1);
+}
+main .acBG2 img {
+  position: absolute;
+  width: 600px;
+  height: auto;
+  top: 55%;
+  right: 70%;
+  opacity: 40%;
+  z-index: -1;
+}
+main .acBG3 img {
+  position: absolute;
+  width: 600px;
+  height: auto;
+  top: 75%;
+  right: -15%;
+  opacity: 40%;
+  z-index: -1;
+  transform: scaleX(-1);
 }
 
 .access-detail-group {
@@ -749,12 +782,16 @@ footer .copyright {
 }
 .access-detail-group .access-detail {
   width: 100%;
+  margin-left: 10px;
 }
 .access-detail-group .access-detail__title {
   color: #165e83;
-  font-size: 50px;
+  font-size: 40px;
   padding: 5px;
   margin-bottom: 30px;
+}
+.access-detail-group .access-detail__paragraph {
+  line-height: 40px;
 }
 .access-detail-group .access-detail-info {
   width: 100%;
@@ -816,7 +853,7 @@ footer .copyright {
   width: 80%;
   height: 100%;
   margin: auto;
-  margin-bottom: 120px;
+  margin-bottom: 60px;
 }
 .route-scroll .scroll-group {
   display: flex;
@@ -829,13 +866,21 @@ footer .copyright {
   width: 33%;
   color: #fff;
   text-align: center;
-  background-color: #165e83;
+  line-height: 69px;
+  font-size: 20px;
+  background: linear-gradient(#00a3af -50%, #165e83 90%);
 }
 .route-scroll .scroll-group li a {
   display: inline-block;
   color: #fff;
   width: 100%;
-  padding: 20px;
+  height: 69px;
+}
+.route-scroll .scroll-group li:first-child {
+  border-radius: 10px 0 0 10px;
+}
+.route-scroll .scroll-group li:last-child {
+  border-radius: 0 10px 10px 0;
 }
 
 .route {
@@ -845,6 +890,18 @@ footer .copyright {
 }
 .route img {
   width: 100%;
+}
+
+.car-route img:not([src]) {
+  content: url(../../../pages/access/pic/car.svg);
+}
+
+.train-route img:not([src]) {
+  content: url(../../../pages/access/pic/train.svg);
+}
+
+.bus-route img:not([src]) {
+  content: url(../../../pages/access/pic/bus.svg);
 }
 
 .route:last-child {
@@ -891,6 +948,7 @@ footer .copyright {
   text-align: center;
   width: 49.3%;
   background-color: #ebf6f7;
+  border-radius: 10px;
 }
 .route-info-group .route-info__title {
   font-size: 18px;
@@ -927,6 +985,7 @@ footer .copyright {
   text-align: center;
   padding: 20px;
   margin-bottom: 120px;
+  border-radius: 10px;
 }
 
 .sight {
@@ -934,7 +993,7 @@ footer .copyright {
   margin: auto;
 }
 .sight__title {
-  font-size: 32px;
+  font-size: 30px;
   text-align: center;
   color: #165e83;
 }
@@ -950,6 +1009,7 @@ footer .copyright {
 }
 .sight__card-group {
   min-height: 100px;
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -960,23 +1020,57 @@ footer .copyright {
   text-align: center;
   margin-bottom: 60px;
 }
-.card-group__img {
-  background-color: rgb(42, 131, 24);
+.card-group .card-group__img1,
+.card-group .card-group__img2,
+.card-group .card-group__img3,
+.card-group .card-group__img4,
+.card-group .card-group__img5,
+.card-group .card-group__img6 {
   width: 100%;
   height: 330px;
+  border-radius: 10px;
 }
-.card-group__img img {
-  width: 100%;
-  height: 100%;
+.card-group .card-group__img1 {
+  background: url(../../../pages/access/pic/sight1.jpg);
+  background-size: cover;
+  background-position: center;
 }
-.card-group__name {
+.card-group .card-group__img2 {
+  background: url(../../../pages/access/pic/sight2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.card-group .card-group__img3 {
+  background: url(../../../pages/access/pic/sight3.jpg);
+  background-size: cover;
+  background-position: center bottom;
+}
+.card-group .card-group__img4 {
+  background: url(../../../pages/access/pic/sight4.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.card-group .card-group__img5 {
+  background: url(../../../pages/access/pic/sight5.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.card-group .card-group__img6 {
+  background: url(../../../pages/access/pic/sight6.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.card-group__name h3 {
   color: #165e83;
-  font-size: 20px;
-  margin: 10px;
+  font-size: 24px;
+  margin: 15px 0;
 }
 .card-group__detail {
   text-align: left;
   margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 30px;
+  min-height: 150px;
 }
 .card-group__time {
   text-align: left;
@@ -985,28 +1079,54 @@ footer .copyright {
   border-bottom: 1px solid #165e83;
 }
 
+@media (max-width: 848px) {
+  .card-group__detail {
+    min-height: 180px;
+  }
+}
 @media (min-width: 840px) {
   .welcome__title br {
     display: none;
   }
 }
 @media (max-width: 1500px) {
+  main .acBG2 img {
+    top: 45%;
+  }
+  main .acBG3 img {
+    top: 68%;
+  }
   .card-group {
     width: 40%;
   }
 }
 @media (max-width: 1280px) {
+  main .acBG img {
+    right: -30%;
+  }
+  main .acBG3 img {
+    top: 65%;
+  }
   .welcome__title {
     font-size: 1.8rem;
     left: 30%;
     top: 70%;
+    letter-spacing: 2px;
   }
 }
 @media (max-width: 998px) {
+  main .acBG img {
+    top: 20%;
+  }
+  main .acBG3 img {
+    top: 70%;
+    right: -30%;
+  }
   .welcome__title {
     font-size: 1.8rem;
     left: 25%;
     top: 70%;
+    letter-spacing: 2px;
   }
   .access-detail-group {
     height: auto;
@@ -1037,8 +1157,15 @@ footer .copyright {
   .caution {
     font-size: 20px;
   }
-  .card-group__img {
+  .card-group .card-group__img1,
+.card-group .card-group__img2,
+.card-group .card-group__img3,
+.card-group .card-group__img4,
+.card-group .card-group__img5,
+.card-group .card-group__img6 {
+    width: 100%;
     height: 250px;
+    border-radius: 10px;
   }
   .scroll-section ul li {
     width: 33.33%;
@@ -1049,14 +1176,46 @@ footer .copyright {
   }
 }
 @media (max-width: 840px) {
+  main .acBG img {
+    top: 14%;
+    right: -40%;
+    width: 500px;
+  }
+  main .acBG2 img {
+    top: 60%;
+  }
+  main .acBG3 img {
+    top: 78%;
+  }
   .welcome__title {
     font-size: 1.8rem;
     left: 30%;
     top: 70%;
+    letter-spacing: 2px;
+  }
+  .car-route img:not([src]) {
+    content: url(../../../pages/access/pic/car2.svg);
+  }
+  .train-route img:not([src]) {
+    content: url(../../../pages/access/pic/train2.svg);
+  }
+  .bus-route img:not([src]) {
+    content: url(../../../pages/access/pic/bus2.svg);
   }
   .route-scroll .scroll-group li {
     width: 100%;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    line-height: 60px;
+  }
+  .route-scroll .scroll-group li a {
+    height: 60px;
+  }
+  .route-scroll .scroll-group li:first-child {
+    border-radius: 10px;
+  }
+  .route-scroll .scroll-group li:last-child {
+    border-radius: 10px;
   }
 }
 @media (max-width: 785px) {
@@ -1065,18 +1224,46 @@ footer .copyright {
   }
 }
 @media (max-width: 780px) {
+  main .acBG2 img {
+    top: 50%;
+  }
+  main .acBG3 img {
+    top: 66%;
+    right: -40%;
+  }
   .card-group {
     width: 80%;
+    height: 100%;
   }
-  .card-group__img {
-    height: 320px;
+  .card-group__detail {
+    min-height: 100%;
   }
 }
 @media (max-width: 575px) {
+  main .acBG img {
+    top: 14%;
+    right: -60%;
+    width: 500px;
+  }
+  main .acBG2 img {
+    top: 43%;
+  }
+  main .acBG3 img {
+    top: 61%;
+    right: -90%;
+  }
   .welcome__title {
     font-size: 1.8rem;
     left: 20%;
     top: 70%;
+    letter-spacing: 2px;
+  }
+}
+@media (max-width: 500px) {
+  main .acBG img {
+    top: 15%;
+    right: -60%;
+    width: 400px;
   }
 }
 @media (max-width: 480px) {
@@ -1089,6 +1276,7 @@ footer .copyright {
     font-size: 1.6rem;
     left: 0%;
     top: 70%;
+    letter-spacing: 2px;
   }
   .parking {
     width: 80%;
@@ -1100,8 +1288,5 @@ footer .copyright {
 @media (max-width: 361px) {
   .card-group {
     width: 95%;
-  }
-  .card-group__img {
-    height: 200px;
   }
 }/*# sourceMappingURL=access.css.map */

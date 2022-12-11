@@ -243,13 +243,13 @@ footer .copyright {
   width: 85%;
   display: flex;
   align-items: center;
-  height: 160px;
+  height: 90px;
   margin: auto;
   margin-bottom: 120px;
 }
 .scroll-section ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   text-align: center;
   width: 100%;
@@ -263,8 +263,8 @@ footer .copyright {
   width: 80%;
   gap: 10px;
   padding: 8px 0;
-  border-radius: 10px;
-  background-color: #165e83;
+  border-radius: 50px;
+  background: linear-gradient(#00a3af -40%, #165e83 100%);
 }
 
 .form-menu-pt {
@@ -273,7 +273,6 @@ footer .copyright {
 
 .form-menu {
   width: 500px;
-  height: 100%;
   background-color: #fff;
   box-shadow: 1px 1px 8px 1px #83ccd2;
   border-radius: 10px;
@@ -410,12 +409,13 @@ footer .copyright {
 .foreword {
   width: 80%;
   margin: auto;
-  margin-top: 56px;
-  margin-bottom: 72px;
+  margin-top: 80px;
+  margin-bottom: 92px;
   text-align: center;
 }
 .foreword__paragraph {
   margin-top: 20px;
+  font-size: 18px;
 }
 .foreword__paragraph:last-of-type {
   margin-bottom: 28px;
@@ -444,9 +444,9 @@ footer .copyright {
 .triangle-up {
   width: 0;
   height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-bottom: 30px solid #555;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-bottom: 22px solid #165e83;
 }
 
 .text-white {
@@ -708,20 +708,26 @@ footer .copyright {
 .welcome:before {
   content: "";
   background: linear-gradient(transparent 70%, #fff), url("../../../pages/history/pic/welcome.jpg") no-repeat center center/cover;
-  opacity: 0.7;
+  opacity: 0.8;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   position: absolute;
   z-index: -1;
-  background-position: 50% 80%;
 }
 
-.welcome__title {
-  color: #fff;
-  left: 40%;
-  top: 80%;
+main {
+  position: relative;
+}
+main .historyBG img {
+  position: absolute;
+  width: 1000px;
+  height: auto;
+  top: 65%;
+  right: 55%;
+  opacity: 10%;
+  z-index: -1;
 }
 
 .history {
@@ -810,7 +816,8 @@ footer .copyright {
   color: #fff;
   background-color: #165e83;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 20px;
+  font-weight: normal;
   padding: 10px;
   margin-bottom: 15px;
   border-radius: 10px 10px 0 0;
@@ -825,7 +832,7 @@ footer .copyright {
 .garden-one {
   width: 100%;
   background: url(../../../pages/history/pic/garden1.jpg);
-  background-position: center bottom;
+  background-position: center center;
   background-size: cover;
 }
 
@@ -871,22 +878,22 @@ footer .copyright {
 
 .food-one {
   width: 100%;
-  background: url(../../../pages/history/pic/food1.jpg);
-  background-position: center bottom;
+  background: url(../../../pages/history/pic/food3.jpg);
+  background-position: center center;
   background-size: cover;
   border-radius: 0 0 10px 10px;
 }
 
 .food-two {
   width: 49.5%;
-  background: url(../../../pages/history/pic/food2.jpg);
+  background: url(../../../pages/history/pic/food1.jpg);
   background-position: center center;
   background-size: cover;
 }
 
 .food-three {
   width: 49.5%;
-  background: url(../../../pages/history/pic/food3.jpg);
+  background: url(../../../pages/history/pic/food2.jpg);
   background-position: center center;
   background-size: cover;
 }
@@ -901,6 +908,7 @@ footer .copyright {
     font-size: 1.8rem;
     left: 30%;
     top: 80%;
+    letter-spacing: 2px;
   }
 }
 @media (max-width: 1200px) {
@@ -913,6 +921,7 @@ footer .copyright {
     font-size: 1.8rem;
     left: 25%;
     top: 80%;
+    letter-spacing: 2px;
   }
   .history__title {
     width: 100%;
@@ -948,21 +957,26 @@ footer .copyright {
     font-size: 1.8rem;
     left: 30%;
     top: 80%;
+    letter-spacing: 2px;
   }
   .gallery-card {
     width: 90%;
   }
 }
 @media (max-width: 750px) {
+  main .historyBG img {
+    width: 900px;
+    right: 10%;
+  }
   .gallery-card {
     width: 100%;
   }
 }
 @media (max-width: 575px) {
   .welcome__title {
-    font-size: 1.8rem;
     left: 20%;
     top: 80%;
+    letter-spacing: 2px;
   }
   .gallery__title {
     letter-spacing: 2rem;
@@ -995,21 +1009,28 @@ footer .copyright {
   .size-return {
     height: 300px;
   }
+  .history .history-intro-text {
+    margin: 40px;
+  }
 }
 @media (max-width: 420px) {
   .welcome__title {
     font-size: 1.6rem;
     left: 0%;
     top: 80%;
+    letter-spacing: 2px;
   }
   .history {
     width: 90%;
   }
   .history__intro {
-    background-position-x: -200px !important;
+    min-height: 300px;
   }
   .history .history-intro-text {
-    margin: 40px 25px 20px;
+    margin: 0px 25px 20px;
+  }
+  .history .history-intro-text__title {
+    margin: 20px 0;
   }
   .gallery__title {
     letter-spacing: 1.5rem;

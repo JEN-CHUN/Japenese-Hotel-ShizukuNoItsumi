@@ -243,13 +243,13 @@ footer .copyright {
   width: 85%;
   display: flex;
   align-items: center;
-  height: 160px;
+  height: 90px;
   margin: auto;
   margin-bottom: 120px;
 }
 .scroll-section ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   text-align: center;
   width: 100%;
@@ -263,8 +263,8 @@ footer .copyright {
   width: 80%;
   gap: 10px;
   padding: 8px 0;
-  border-radius: 10px;
-  background-color: #165e83;
+  border-radius: 50px;
+  background: linear-gradient(#00a3af -40%, #165e83 100%);
 }
 
 .form-menu-pt {
@@ -273,7 +273,6 @@ footer .copyright {
 
 .form-menu {
   width: 500px;
-  height: 100%;
   background-color: #fff;
   box-shadow: 1px 1px 8px 1px #83ccd2;
   border-radius: 10px;
@@ -410,12 +409,13 @@ footer .copyright {
 .foreword {
   width: 80%;
   margin: auto;
-  margin-top: 56px;
-  margin-bottom: 72px;
+  margin-top: 80px;
+  margin-bottom: 92px;
   text-align: center;
 }
 .foreword__paragraph {
   margin-top: 20px;
+  font-size: 18px;
 }
 .foreword__paragraph:last-of-type {
   margin-bottom: 28px;
@@ -444,9 +444,9 @@ footer .copyright {
 .triangle-up {
   width: 0;
   height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-bottom: 30px solid #555;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-bottom: 22px solid #165e83;
 }
 
 .text-white {
@@ -708,20 +708,33 @@ footer .copyright {
 .welcome:before {
   content: "";
   background: linear-gradient(transparent 70%, #fff), url("../../../pages/spring/pic/welcome.jpg") no-repeat center center/cover;
-  opacity: 0.7;
+  opacity: 0.75;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   position: absolute;
   z-index: -1;
-  background-position: center center;
 }
 
 .welcome__title {
   color: #fff;
-  left: 40%;
-  top: 80%;
+  left: 38%;
+  top: 75%;
+  letter-spacing: 2px;
+}
+
+main {
+  position: relative;
+}
+main .springBG img {
+  position: absolute;
+  width: 246px;
+  height: auto;
+  top: 15%;
+  right: 5%;
+  opacity: 60%;
+  z-index: -1;
 }
 
 .spring {
@@ -743,11 +756,12 @@ footer .copyright {
 }
 .spring__img {
   width: 100%;
+  height: 100%;
   border-radius: 10px;
   vertical-align: bottom;
 }
 .spring__sub-title {
-  font-size: 1.2rem;
+  font-size: 20px;
   text-align: center;
   color: #fff;
   background-color: #165e83;
@@ -768,29 +782,34 @@ footer .copyright {
 .spring__intro-title {
   padding: 0 36px;
   color: #fff;
+  font-size: 18px;
 }
 .spring__intro-detail {
   width: auto;
   flex: 1;
   background-color: #ebf6f7;
+  border: 1px solid #00a3af;
 }
 .spring .intro-radius-adjust {
   border-radius: 0 0 15px 10px;
 }
 .spring .intro-radius {
   border-radius: 0 0 10px 0;
+  border: 1px solid #00a3af;
 }
 .spring .img-radius {
   border-radius: 10px 10px 0 0;
 }
 .spring .dot li {
-  margin: 15px 5px 15px 5px;
+  margin: 15px 30px 15px 30px;
+  color: #165e83;
+  font-size: 18px;
+}
+.spring .dot li:first-child {
+  margin-top: 40px;
 }
 .spring .dot li:last-child {
-  margin-bottom: 15px;
-}
-.spring .dot li {
-  margin: 15px 5px 15px 5px;
+  margin-bottom: 40px;
 }
 
 .phone-group {
@@ -835,13 +854,19 @@ footer .copyright {
     font-size: 1.8rem;
     left: 30%;
     top: 80%;
+    letter-spacing: 2px;
   }
 }
 @media (max-width: 998px) {
+  main .springBG img {
+    top: 18%;
+    right: -10%;
+  }
   .welcome__title {
     font-size: 1.8rem;
     left: 25%;
     top: 80%;
+    letter-spacing: 2px;
   }
   .spring__sub-title {
     padding: 10px 0;
@@ -856,6 +881,12 @@ footer .copyright {
   }
   .spring .intro-radius {
     border-radius: 0 0 10px 10px;
+  }
+  .spring .dot li:first-child {
+    margin-top: 25px;
+  }
+  .spring .dot li:last-child {
+    margin-bottom: 25px;
   }
   .ul-center {
     text-align: center;
@@ -873,13 +904,19 @@ footer .copyright {
     font-size: 1.8rem;
     left: 30%;
     top: 80%;
+    letter-spacing: 2px;
   }
 }
 @media (max-width: 575px) {
+  main .springBG img {
+    top: 20%;
+    right: -30%;
+  }
   .welcome__title {
     font-size: 1.8rem;
-    left: 20%;
+    left: 15%;
     top: 80%;
+    letter-spacing: 2px;
   }
 }
 @media (max-width: 470px) {
@@ -896,5 +933,6 @@ footer .copyright {
     font-size: 1.6rem;
     left: 0%;
     top: 80%;
+    letter-spacing: 2px;
   }
 }/*# sourceMappingURL=spring.css.map */

@@ -243,13 +243,13 @@ footer .copyright {
   width: 85%;
   display: flex;
   align-items: center;
-  height: 160px;
+  height: 90px;
   margin: auto;
   margin-bottom: 120px;
 }
 .scroll-section ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   text-align: center;
   width: 100%;
@@ -263,8 +263,8 @@ footer .copyright {
   width: 80%;
   gap: 10px;
   padding: 8px 0;
-  border-radius: 10px;
-  background-color: #165e83;
+  border-radius: 50px;
+  background: linear-gradient(#00a3af -40%, #165e83 100%);
 }
 
 .form-menu-pt {
@@ -273,7 +273,6 @@ footer .copyright {
 
 .form-menu {
   width: 500px;
-  height: 100%;
   background-color: #fff;
   box-shadow: 1px 1px 8px 1px #83ccd2;
   border-radius: 10px;
@@ -410,12 +409,13 @@ footer .copyright {
 .foreword {
   width: 80%;
   margin: auto;
-  margin-top: 56px;
-  margin-bottom: 72px;
+  margin-top: 80px;
+  margin-bottom: 92px;
   text-align: center;
 }
 .foreword__paragraph {
   margin-top: 20px;
+  font-size: 18px;
 }
 .foreword__paragraph:last-of-type {
   margin-bottom: 28px;
@@ -444,9 +444,9 @@ footer .copyright {
 .triangle-up {
   width: 0;
   height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-bottom: 30px solid #555;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-bottom: 22px solid #165e83;
 }
 
 .text-white {
@@ -715,13 +715,26 @@ footer .copyright {
   right: 0;
   position: absolute;
   z-index: -1;
-  background-position: center center;
 }
 
 .welcome__title {
   color: #fff;
   left: 38%;
-  top: 80%;
+  top: 75%;
+  letter-spacing: 2px;
+}
+
+main {
+  position: relative;
+}
+main .spaBG img {
+  position: absolute;
+  width: 1200px;
+  height: auto;
+  top: 75%;
+  right: -35%;
+  opacity: 20%;
+  z-index: -1;
 }
 
 .spa-pic {
@@ -732,76 +745,104 @@ footer .copyright {
 .spa-pic__title {
   color: #165e83;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 30px;
   letter-spacing: 60px;
   text-indent: 60px;
-  margin-bottom: 15px;
+  margin-bottom: 52px;
 }
 .spa-pic__img-div {
-  background-color: darkcyan;
   width: 100%;
   height: 400px;
   background: url("../../../pages/spa/pic/spa.jpg");
   background-size: cover;
   background-position: center center;
+  border-radius: 20px;
 }
 
 .sales-group {
-  width: 70%;
+  width: 65%;
   margin: auto;
 }
 .sales-group__title {
   color: #165e83;
-  font-size: 1.8rem;
+  font-size: 30px;
+  font-weight: normal;
   letter-spacing: 60px;
   text-indent: 60px;
   text-align: center;
   margin-bottom: 60px;
 }
 
-.sales-card {
+.sales-card,
+.sales-card2,
+.sales-card3 {
   background-color: #ebf6f7;
-  border-radius: 15px 0 0 15px;
+  border-radius: 20px;
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 30px;
 }
-.sales-card__img {
-  border-radius: 10px 0 0 10px;
-  width: 40%;
-  height: 400px;
-  background: url(../../../pages/spa/pic/promote1.jpg) center bottom;
-}
-.sales-card__detail {
+.sales-card__detail,
+.sales-card2__detail,
+.sales-card3__detail {
   flex: 1;
   margin-left: 50px;
   margin-right: 50px;
 }
-.sales-card__detail__title {
+.sales-card__detail__title,
+.sales-card2__detail__title,
+.sales-card3__detail__title {
   color: #165e83;
-  font-size: 1.5rem;
+  font-size: 24px;
   text-align: center;
   padding-top: 30px;
   padding-bottom: 5px;
   margin-bottom: 30px;
   border-bottom: 2px solid #165e83;
 }
-.sales-card__detail__info {
+.sales-card__detail__info,
+.sales-card2__detail__info,
+.sales-card3__detail__info {
+  color: #165e83;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   font-size: 1.2rem;
   margin-bottom: 20px;
 }
-.sales-card__detail__info__title {
-  flex: 15%;
-}
-.sales-card__detail__info__detail {
+.sales-card__detail__info__detail,
+.sales-card2__detail__info__detail,
+.sales-card3__detail__info__detail {
   width: 85%;
 }
 
+.sales-card__img {
+  border-radius: 20px 0 0 20px;
+  width: 40%;
+  height: 366px;
+  background: url(../../../pages/spa/pic/promote1.jpg) center bottom;
+}
+
+.sales-card2 .sales-card__img {
+  border-radius: 20px 0 0 20px;
+  width: 40%;
+  height: 366px;
+  background: url(../../../pages/spa/pic/promote2.jpg) center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sales-card3 .sales-card__img {
+  border-radius: 20px 0 0 20px;
+  width: 40%;
+  height: 366px;
+  background: url(../../../pages/spa/pic/promote3.jpg) center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .phone-group {
-  width: 70%;
+  width: 65%;
   margin: auto;
   text-align: center;
   padding: 15px 0;
@@ -820,6 +861,7 @@ footer .copyright {
   padding: 35px 0;
   color: #165e83;
   background-color: #ebf6f7;
+  border-radius: 20px;
 }
 .phone-group__img {
   width: 1rem;
@@ -828,6 +870,7 @@ footer .copyright {
 }
 
 .caution {
+  color: #165e83;
   border-top: 2px solid #165e83;
   border-bottom: 2px solid #165e83;
   width: 85%;
@@ -857,14 +900,13 @@ footer .copyright {
   }
 }
 @media (max-width: 1460px) {
+  main .spaBG img {
+    top: 75%;
+    right: -50%;
+  }
   .sales-card {
     border-radius: 15px 0 15px 15px;
     margin-bottom: 30px;
-  }
-  .sales-card__img {
-    border-radius: 10px 0 0 10px;
-    width: 30%;
-    background-position: -100px center;
   }
   .sales-card__detail {
     width: 100%;
@@ -899,14 +941,19 @@ footer .copyright {
   .welcome__title {
     font-size: 1.8rem;
     left: 30%;
-    top: 80%;
+    top: 75%;
+    letter-spacing: 2px;
   }
 }
 @media (max-width: 1200px) {
+  main .spaBG img {
+    top: 65%;
+    right: -75%;
+  }
   .sales-card {
     width: 75%;
     margin: auto;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
   .sales-card__img {
     border-radius: 10px 10px 0 0;
@@ -927,15 +974,32 @@ footer .copyright {
   .sales-card__detail__info__detail {
     width: 85%;
   }
+  .sales-card2,
+.sales-card3 {
+    width: 75%;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+  .sales-card2 .sales-card__img,
+.sales-card3 .sales-card__img {
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    background-position: center center;
+  }
   .phone-group {
     width: 65%;
+    margin-bottom: 0;
   }
 }
 @media (max-width: 998px) {
+  main .spaBG img {
+    top: 60%;
+  }
   .welcome__title {
     font-size: 1.8rem;
     left: 25%;
-    top: 80%;
+    top: 75%;
+    letter-spacing: 2px;
   }
   .caution li {
     margin-left: 40px;
@@ -951,7 +1015,6 @@ footer .copyright {
 @media (max-width: 924px) {
   .sales-card {
     width: 95%;
-    margin: auto;
     margin-bottom: 30px;
   }
   .sales-card__img {
@@ -973,12 +1036,17 @@ footer .copyright {
   .sales-card__detail__info__detail {
     width: 85%;
   }
+  .sales-card2,
+.sales-card3 {
+    width: 95%;
+  }
 }
 @media (max-width: 840px) {
   .welcome__title {
     font-size: 1.8rem;
-    left: 30%;
-    top: 80%;
+    left: 20%;
+    top: 70%;
+    letter-spacing: 2px;
   }
 }
 @media (max-width: 728px) {
@@ -1022,10 +1090,14 @@ footer .copyright {
   }
 }
 @media (max-width: 575px) {
+  main .spaBG img {
+    display: none;
+  }
   .welcome__title {
     font-size: 1.8rem;
-    left: 20%;
-    top: 80%;
+    left: 10%;
+    top: 70%;
+    letter-spacing: 2px;
   }
   .caution li {
     margin-left: 30px;
@@ -1041,7 +1113,8 @@ footer .copyright {
   .welcome__title {
     font-size: 1.6rem;
     left: 0%;
-    top: 80%;
+    top: 70%;
+    letter-spacing: 2px;
   }
   .caution li {
     margin-left: 0px;
