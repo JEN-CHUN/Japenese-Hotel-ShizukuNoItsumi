@@ -25,10 +25,12 @@
 <br/>
 
 ### 2.利用Vanilla CSS以及AOS Library做出不同的動畫效果。
+### Flex 排版
 ### ![Vanilla CSS & AOS Library](./readme_img/flex.jpg)
 
 <br/>
 
+### Vanilla CSS 跑馬燈效果
 ### ![Vanilla CSS & AOS Library](./readme_img/marquee.jpg)
 <br/>
 
