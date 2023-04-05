@@ -1,54 +1,37 @@
-# 英英字典 Simple English to English Dictionray
-### 本專案基於Free Dictionary API 所實踐而成。
-### 使用Vue與原生JS Fetch API，並使用Vue Cli 開發環境。
+# 飯店旅館網站-雫ノ泉
+### 本專案無使用任何框架，單純使用HTML、CSS、JS與SCSS所實踐而成(另有使用AOS Library輔助開發動畫效果)。
 
 <br/>
 
 # 設計理念：
-### 最初是為了解決應英系同學英英字典的困擾而萌生出來的主意。
-### 而後在[Public APIs](https://github.com/public-apis/public-apis)中，找到了[免費的英英字典API](https://dictionaryapi.dev/)可以使用
+### 此專案為2022年11月與組員於前端培訓班一同開發。
+### 經過思索過後決定選擇日式旅館當作成果發表的作業。
+### 本人負責程式撰寫、切版等工作
+
 
 <br/>
 
 # 本專案特色
-### 清楚明瞭的介面，並且可以輕鬆查詢想要的單字
-### ![Vocabulary Search](./readme_img/start.jpg)
+### 採用日式風格建置網站。
+### ![Website Home](./readme_img/homepage.jpg)
 
-### 查詢成功的畫面
-### ![Vocabulary Fetched](./readme_img/fetched.jpg)
+### 1.使用了Local Storage來跨頁存取資料，並模擬出訂房的步驟與流程
+### ![Local Storage](./readme_img/order.jpg)
+### ![Local Storage](./readme_img/order1-1.jpg)
+### ![Local Storage](./readme_img/order2.jpg)
+### ![Local Storage](./readme_img/order3.jpg)
+### ![Local Storage](./readme_img/order4.jpg)
+### ![Local Storage](./readme_img/order5.jpg)
+<br/>
 
-### 查詢失敗顯示的提示訊息
-### ![Fetched Failed](./readme_img/fail.jpg)
-<br>
+### 2.利用Vanilla CSS以及AOS Library做出不同的動畫效果。
+### ![Vanilla CSS & AOS Library](./readme_img/flex.jpg)
 
 <br/>
 
-# 所使用的API連結
-### Free Dictionary API (https://dictionaryapi.dev/)
+### ![Vanilla CSS & AOS Library](./readme_img/marquee.jpg)
+<br/>
 
+### 3.表單皆有使用Regex進行字符字串匹配。
+### ![Form Regex](./readme_img/order6.jpg)
 <br>
-
-# 如何安裝建置此APP
-
-### 建置的第一步驟 (Project setup)
-```
-npm install
-```
-
-### 建置完成之後進入開發階段開啟APP (Compiles and hot-reloads for development)
-```
-npm run serve
-```
-
-<!-- ### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/). -->
